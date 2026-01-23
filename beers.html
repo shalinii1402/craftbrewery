@@ -12,6 +12,20 @@
     <title>Our Beers | Copper Creek Brewery</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @media (max-width: 600px) {
+            .strength-item {
+                border-left: none !important;
+                border-right: none !important;
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 15px !important;
+            }
+
+            .strength-item:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -77,7 +91,35 @@
     <!-- 3. Beer List (Existing Grid) -->
     <section class="section" style="background-color: var(--surface);">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px;">Core Range</h2>
+            <h2 style="text-align: center; margin-bottom: 30px;">Core Range</h2>
+
+            <!-- Choose Your Strength Info Box -->
+            <div class="card p-4 mb-5"
+                style="max-width: 800px; margin: 0 auto 50px; border: 1px solid var(--primary-color); background-color: rgba(223, 160, 75, 0.05);">
+                <h3 style="text-align: center; font-size: 20px; color: var(--primary-color); margin-bottom: 20px;">
+                    <i class="fas fa-info-circle" style="margin-right: 10px;"></i>Choose Your Strength
+                </h3>
+                <div
+                    style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; text-align: center;">
+                    <div class="strength-item" style="flex: 1; min-width: 150px;">
+                        <h4 style="font-size: 16px; margin-bottom: 5px;">Light</h4>
+                        <p style="font-size: 14px; color: var(--primary-color); font-weight: 600;">3–4% ABV</p>
+                        <p style="font-size: 13px; color: #888;">Easy drinking</p>
+                    </div>
+                    <div class="strength-item"
+                        style="flex: 1; min-width: 150px; border-left: 1px solid var(--border); border-right: 1px solid var(--border); padding: 0 10px;">
+                        <h4 style="font-size: 16px; margin-bottom: 5px;">Medium</h4>
+                        <p style="font-size: 14px; color: var(--primary-color); font-weight: 600;">4.5–6% ABV</p>
+                        <p style="font-size: 13px; color: #888;">Balanced</p>
+                    </div>
+                    <div class="strength-item" style="flex: 1; min-width: 150px;">
+                        <h4 style="font-size: 16px; margin-bottom: 5px;">Strong</h4>
+                        <p style="font-size: 14px; color: var(--primary-color); font-weight: 600;">6%+ ABV</p>
+                        <p style="font-size: 13px; color: #888;">Bold & intense</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="grid-3">
                 <!-- Beer 1 -->
                 <div class="card pop-in">
