@@ -431,6 +431,10 @@ footer {
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    position: relative;
+    /* Context for absolute button */
+    min-height: 60px;
+    /* Ensure space */
 }
 
 .back-to-top {
@@ -444,6 +448,12 @@ footer {
     justify-content: center;
     cursor: pointer;
     border: 1px solid var(--border);
+
+    /* Position bottom-right of footer */
+    position: absolute;
+    bottom: 20px;
+    /* 0 if we want it aligned with padding? 20px looks good relative to container edge */
+    right: 20px;
 }
 
 /* Responsive */
@@ -483,6 +493,16 @@ footer {
     .grid-3,
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        padding-bottom: 60px;
+        /* Space for button on mobile to avoid overlap if text is long */
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
     }
 
     /* Ensure the auth-buttons container stays visible for the hamburger */
