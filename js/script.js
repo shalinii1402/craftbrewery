@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
+    // Calculate and set scrollbar width for fixed header alignment
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+
+    window.addEventListener('resize', () => {
+        const sbWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.documentElement.style.setProperty('--scrollbar-width', `${sbWidth}px`);
+    });
+
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.querySelector('.nav-links');
 
