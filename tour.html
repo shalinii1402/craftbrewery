@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Tour | Copper Creek Brewery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: 4px;
+            font-family: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                    class="logo-accent">CREEK</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"
+                                style="font-size: 12px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Home 1</a></li>
+                            <li><a href="home-2.html" class="dropdown-item">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="beers.html" class="nav-link">Beer List</a></li>
+                    <li class="nav-item"><a href="tour.html" class="nav-link active">Tours</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn">Sign Up</a>
+                <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero -->
+    <section class="hero"
+        style="background-image: url('https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-content">
+            <h1 class="hero-title">Brewery Tours</h1>
+            <p class="hero-subtitle">Step inside and see the craft in action.</p>
+        </div>
+    </section>
+
+    <!-- 2. Tour Details / Booking -->
+    <section class="section">
+        <div class="container grid-2">
+            <div class="reveal-left">
+                <h2>The Experience</h2>
+                <p>Join our expert guides on a 60-minute journey through our brewing facility. You'll learn about:</p>
+                <ul style="margin: 20px 0; padding-left: 20px; list-style: disc;">
+                    <li style="margin-bottom: 10px;">The history of Copper Creek</li>
+                    <li style="margin-bottom: 10px;">Our unique brewing process</li>
+                    <li style="margin-bottom: 10px;">Ingredients sourcing</li>
+                    <li style="margin-bottom: 10px;">Packaging and distribution</li>
+                </ul>
+                <p><strong>Includes:</strong> A flight of 4 tasters and a souvenir glass.</p>
+                <p><strong>Price:</strong> $25 per person</p>
+            </div>
+
+            <div class="card pop-in">
+                <h3 style="margin-bottom: 20px;">Book Your Spot</h3>
+                <form>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px;">Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px;">Time</label>
+                        <select class="form-control">
+                            <option>12:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>4:00 PM</option>
+                            <option>6:00 PM</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px;">Number of Guests</label>
+                        <input type="number" min="1" max="10" class="form-control" value="2">
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Reserve Now</button>
+                    <p style="font-size: 12px; color: #888; margin-top: 10px; text-align: center;">No payment required
+                        today. Pay upon arrival.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Tour Highlights (New Section) -->
+    <section class="section" style="background-color: var(--surface);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Highlights</h2>
+            <div class="grid-3">
+                <div class="card reveal-left">
+                    <img src="https://images.unsplash.com/photo-1559526323-cb2f2fe2591b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Brewhouse"
+                        style="border-radius: 4px; margin-bottom: 15px; width: 100%; height: 200px; object-fit: cover;">
+                    <h4>The Brewhouse</h4>
+                    <p style="color: #888; font-size: 14px;">See our 30-barrel brewing system up close and smell the
+                        mash.</p>
+                </div>
+                <div class="card reveal-left" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Fermentation"
+                        style="border-radius: 4px; margin-bottom: 15px; width: 100%; height: 200px; object-fit: cover;">
+                    <h4>Fermentation Alley</h4>
+                    <p style="color: #888; font-size: 14px;">Walk among the towering stainless steel tanks where the
+                        magic happens.</p>
+                </div>
+                <div class="card reveal-left" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Tasting Room"
+                        style="border-radius: 4px; margin-bottom: 15px; width: 100%; height: 200px; object-fit: cover;">
+                    <h4>Guided Tasting</h4>
+                    <p style="color: #888; font-size: 14px;">End the tour with a curated flight led by one of our
+                        certified Cicerones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Private Events (New Section) -->
+    <section class="section">
+        <div class="container grid-2">
+            <div class="pop-in">
+                <img src="https://images.unsplash.com/photo-1519671482502-9759101d4561?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Private Party" style="border-radius: 8px;">
+            </div>
+            <div class="reveal-left">
+                <h2>Private Events</h2>
+                <p>Looking for a unique venue? Rent our barrel room for your next corporate event, wedding reception, or
+                    birthday party.</p>
+                <ul style="margin: 20px 0; list-style: none;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                            style="color: var(--primary-color); margin-right: 10px;"></i> Accommodates up to 100 guests
+                    </li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                            style="color: var(--primary-color); margin-right: 10px;"></i> Customizable bar packages</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                            style="color: var(--primary-color); margin-right: 10px;"></i> Catering partners available
+                    </li>
+                </ul>
+                <a href="contact.html" class="btn btn-outline">Inquire for Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Visitor Reviews (New Section) -->
+    <section class="section" style="background-color: var(--surface); text-align: center;">
+        <div class="container" style="max-width: 800px;">
+            <i class="fas fa-quote-left" style="font-size: 40px; color: var(--primary-color); margin-bottom: 20px;"></i>
+            <h3 style="margin-bottom: 20px; font-style: italic;">"Hands down the best brewery tour I've been on. Our
+                guide, Mark, was hilarious and incredibly knowledgeable. The beer at the end was just the cherry on
+                top."</h3>
+            <p style="color: #888;">- Jessica T., Google Review</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                            class="logo-accent">CREEK</span></div>
+                    <p>Crafting memories since 2012.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="beers.html">Our Beers</a></li>
+                        <li><a href="tour.html">Tours</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>hello@coppercreek.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Copper Creek Brewery. All rights reserved.</p>
+                <div class="back-to-top" onclick="window.scrollTo(0,0)">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

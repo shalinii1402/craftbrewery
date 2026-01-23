@@ -1,0 +1,530 @@
+/* Google Fonts - Poppins & Outfit */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Color Palette - Warm Craft Brewery */
+    --primary-color: #dfa04b;
+    /* Copper Gold */
+    --primary-hover: #f2c98a;
+    /* Soft Gold */
+
+    /* Dark Mode (Deep Brown Theme) */
+    --background-dark: #1a120b;
+    /* Espresso */
+    --surface-dark: #2c1e16;
+    /* Dark Roast */
+    --text-dark: #f4ecd8;
+    /* Cream */
+    --border-dark: #4a342a;
+    /* Brown Border */
+    --nav-bg-dark: rgba(26, 18, 11, 0.95);
+
+    /* Light Mode (Soft Cream Theme) */
+    --background-light: #fdfbf7;
+    /* Soft Cream */
+    --surface-light: #f3ebe1;
+    /* Latte */
+    --text-light: #2b1810;
+    /* Coffee Bean */
+    --border-light: #dccdb8;
+    /* Tan Border */
+    --nav-bg-light: rgba(253, 251, 247, 0.95);
+
+    /* Accents */
+    --accent: #bf6a30;
+    /* Rust/Copper */
+
+    /* Transitions */
+    --transition: all 0.3s ease;
+
+    /* Spacing */
+    --section-padding: 80px 20px;
+    --container-width: 1200px;
+}
+
+/* Light Mode Variables */
+[data-theme="light"] {
+    --background: var(--background-light);
+    --surface: var(--surface-light);
+    --text: var(--text-light);
+    --border: var(--border-light);
+    --nav-bg: var(--nav-bg-light);
+}
+
+/* Dark Mode Variables (Default) */
+[data-theme="dark"] {
+    --background: var(--background-dark);
+    --surface: var(--surface-dark);
+    --text: var(--text-dark);
+    --border: var(--border-dark);
+    --nav-bg: var(--nav-bg-dark);
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utilities */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: var(--section-padding);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text);
+    border: 2px solid var(--text);
+}
+
+.btn-outline:hover {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    cursor: default;
+    text-decoration: none;
+}
+
+.logo-accent {
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--surface);
+    min-width: 200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    padding: 10px 0;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--primary-color);
+}
+
+/* Mobile Auth Container (Hidden on Desktop) */
+.mobile-auth-container {
+    display: none;
+}
+
+/* Header Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    margin-top: -80px;
+    /* Offset header */
+    padding-top: 80px;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+    color: #fff;
+    /* Always white on hero bg */
+}
+
+.hero-title {
+    font-size: 64px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.hero-btns {
+    animation: fadeInUp 1s ease 0.4s forwards;
+    opacity: 0;
+}
+
+/* Animations */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.pop-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pop-in.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Content Sections */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--surface);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #0b0b0b;
+    color: #fff;
+    padding: 80px 0 20px;
+    margin-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-brand p {
+    color: #888;
+    margin-top: 20px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #888;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.back-to-top {
+    background: var(--surface);
+    color: var(--text);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--border);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--background);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 40px;
+        transition: var(--transition);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .grid-2,
+    .grid-3,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ensure the auth-buttons container stays visible for the hamburger */
+    .auth-buttons {
+        display: flex;
+    }
+
+    /* Hide the specific login/signup buttons in the header on mobile (they are in the menu) */
+    .auth-buttons .btn,
+    .auth-buttons .btn-outline {
+        display: none;
+    }
+
+    /* Show the mobile auth container in the nav menu */
+    .mobile-auth-container {
+        display: flex !important;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .mobile-auth-container .btn,
+    .mobile-auth-container .btn-outline {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Mobile Auth in Nav */
+    .nav-links .auth-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .nav-links .auth-mobile .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+}

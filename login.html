@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Apply theme immediately to prevent flash
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    <title>Login | Copper Creek Brewery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .auth-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--background);
+            padding: 40px 20px;
+        }
+
+        .auth-card {
+            background-color: var(--surface);
+            padding: 40px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid var(--border);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .auth-header .logo {
+            font-size: 28px;
+            margin-bottom: 15px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(223, 160, 75, 0.2);
+        }
+
+        .social-auth {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .social-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .social-btn:hover {
+            background-color: var(--border);
+        }
+
+        .google-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        .fa-facebook {
+            color: #1877F2;
+            font-size: 18px;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 25px 0;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .divider:not(:empty)::before {
+            margin-right: 15px;
+        }
+
+        .divider:not(:empty)::after {
+            margin-left: 15px;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: var(--primary-color);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        @media (max-width: 480px) {
+            .social-auth {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-page">
+        <div class="auth-card pop-in">
+            <div class="auth-header">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-beer" style="margin-right: 10px; color: var(--primary-color);"></i><span
+                        style="color: var(--primary-color); font-weight: 700;">COPPER</span><span class="logo-accent"
+                        style="color: var(--text); font-weight: 400;">CREEK</span>
+                </a>
+                <h2 style="font-size: 24px; margin-top: 10px;">Welcome Back</h2>
+            </div>
+
+            <form action="index.html">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="••••••••" required>
+                </div>
+
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; font-size: 14px;">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #888;">
+                        <input type="checkbox" style="accent-color: var(--primary-color);"> Remember Me
+                    </label>
+                    <a href="#" style="color: var(--primary-color); font-weight: 500; text-decoration: none;">Forgot
+                        Password?</a>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Login</button>
+            </form>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="signup.html"
+                    style="color: var(--primary-color); font-weight: 500; text-decoration: none;">Sign Up</a>
+            </div>
+
+            <div class="divider">OR</div>
+
+            <div class="social-auth">
+                <button class="social-btn">
+                    <svg class="google-icon" viewBox="0 0 18 18">
+                        <path
+                            d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"
+                            fill="#4285F4" />
+                        <path
+                            d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.834.859-3.048.859-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"
+                            fill="#34A853" />
+                        <path
+                            d="M3.964 10.706A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.706V4.962H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.038l3.007-2.332z"
+                            fill="#FBBC05" />
+                        <path
+                            d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.962l3.007 2.332C4.672 5.164 6.656 3.58 9 3.58z"
+                            fill="#EA4335" />
+                    </svg>
+                    Google
+                </button>
+                <button class="social-btn">
+                    <i class="fab fa-facebook"></i> Facebook
+                </button>
+            </div>
+
+            <a href="index.html" class="back-home"><i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Back to
+                Home</a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Copper Creek Brewery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                    class="logo-accent">CREEK</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"
+                                style="font-size: 12px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Home 1</a></li>
+                            <li><a href="home-2.html" class="dropdown-item">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="beers.html" class="nav-link">Beer List</a></li>
+                    <li class="nav-item"><a href="tour.html" class="nav-link">Tours</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn">Sign Up</a>
+                <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero -->
+    <section class="hero"
+        style="min-height: 40vh; height: auto; padding-top: 150px; padding-bottom: 50px; background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-content">
+            <h1 class="hero-title" style="font-size: 48px;">Merch Shop</h1>
+            <p class="hero-subtitle">Wear your passion.</p>
+        </div>
+    </section>
+
+    <!-- 2. Featured Collection (New Section) -->
+    <section class="section">
+        <div class="container grid-2">
+            <div class="pop-in">
+                <img src="https://images.unsplash.com/photo-1548123378-bde4eca81d2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Winter Collection" style="border-radius: 8px;">
+            </div>
+            <div class="reveal-left">
+                <h2>The Winter Collection</h2>
+                <p>Stay warm while enjoying a cold one. Our new line of hoodies, beanies, and flannel shirts are
+                    designed for comfort and style.</p>
+                <ul style="margin: 20px 0; list-style: none;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-tag"
+                            style="color: var(--primary-color); margin-right: 10px;"></i> Premium Heavyweight Cotton
+                    </li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-tag"
+                            style="color: var(--primary-color); margin-right: 10px;"></i> Embroidered Logos</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-tag"
+                            style="color: var(--primary-color); margin-right: 10px;"></i> Limited Edition Colorways</li>
+                </ul>
+                <button class="btn">Shop The Look</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Shop Grid (Existing) -->
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Best Sellers</h2>
+            <div class="grid-3">
+                <!-- Item 1 -->
+                <div class="card pop-in">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="T-Shirt"
+                        style="width:100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
+                    <h3>Classic Tee</h3>
+                    <p style="color: #888; margin-bottom: 10px;">100% Cotton, Black</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 18px; font-weight: 700; color: var(--primary-color);">$25.00</span>
+                        <button class="btn" style="padding: 8px 15px; font-size: 12px;">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="card pop-in" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1542280756-74b2f55e73ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Hat"
+                        style="width:100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
+                    <h3>Trucker Hat</h3>
+                    <p style="color: #888; margin-bottom: 10px;">Snapback, Grey/Black</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 18px; font-weight: 700; color: var(--primary-color);">$20.00</span>
+                        <button class="btn" style="padding: 8px 15px; font-size: 12px;">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="card pop-in" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1570155308259-f40afa3ba7b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Glass"
+                        style="width:100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
+                    <h3>Pint Glass</h3>
+                    <p style="color: #888; margin-bottom: 10px;">16oz Standard Pint</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 18px; font-weight: 700; color: var(--primary-color);">$10.00</span>
+                        <button class="btn" style="padding: 8px 15px; font-size: 12px;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Gift Cards (New Section) -->
+    <section class="section" style="background-color: var(--surface);">
+        <div class="container grid-2">
+            <div class="reveal-left">
+                <h2>Give the Gift of Great Beer</h2>
+                <p>Not sure what size they wear? Can't decide between an IPA or a Stout? Let them choose.</p>
+                <p style="margin-top: 10px;">Our digital gift cards are delivered instantly via email and can be used
+                    for both merchandise and in our taproom.</p>
+                <div style="margin-top: 20px;">
+                    <button class="btn-outline" style="margin-right: 10px;">$25 Card</button>
+                    <button class="btn-outline" style="margin-right: 10px;">$50 Card</button>
+                    <button class="btn-outline">$100 Card</button>
+                </div>
+            </div>
+            <div class="pop-in">
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Gift Card" style="border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Shipping Info (New Section) -->
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Shipping & Returns</h2>
+            <div class="grid-3" style="text-align: center;">
+                <div class="card">
+                    <i class="fas fa-truck"
+                        style="font-size: 30px; color: var(--primary-color); margin-bottom: 15px;"></i>
+                    <h4>Fast Delivery</h4>
+                    <p style="font-size: 14px; color: #888;">Free shipping on all orders over $75 within the continental
+                        US.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-box-open"
+                        style="font-size: 30px; color: var(--primary-color); margin-bottom: 15px;"></i>
+                    <h4>Easy Returns</h4>
+                    <p style="font-size: 14px; color: #888;">Didn't fit? Return it within 30 days for a full refund or
+                        exchange.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt"
+                        style="font-size: 30px; color: var(--primary-color); margin-bottom: 15px;"></i>
+                    <h4>Secure Checkout</h4>
+                    <p style="font-size: 14px; color: #888;">Your data is protected with 256-bit SSL encryption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                            class="logo-accent">CREEK</span></div>
+                    <p>Crafting memories since 2012.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="beers.html">Our Beers</a></li>
+                        <li><a href="tour.html">Tours</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>hello@coppercreek.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Copper Creek Brewery. All rights reserved.</p>
+                <div class="back-to-top" onclick="window.scrollTo(0,0)">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

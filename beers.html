@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Apply theme immediately to prevent flash
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    <title>Our Beers | Copper Creek Brewery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                    class="logo-accent">CREEK</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"
+                                style="font-size: 12px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Home 1</a></li>
+                            <li><a href="home-2.html" class="dropdown-item">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="beers.html" class="nav-link active">Beer List</a></li>
+                    <li class="nav-item"><a href="tour.html" class="nav-link">Tours</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn">Sign Up</a>
+                <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero -->
+    <section class="hero"
+        style="height: 50vh; background-image: url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-content">
+            <h1 class="hero-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6); opacity: 1; transform: none;">
+                Explore Our Craft Beers</h1>
+            <p class="hero-subtitle">Explore our diverse rotation of small-batch brews, where tradition meets
+                innovation. From crisp lagers to complex stouts, every pint is brewed with passion and the finest
+                locally sourced ingredients for an unforgettable taste experience.</p>
+        </div>
+    </section>
+
+    <!-- 2. The Brewing Standard (New Section) -->
+    <section class="section">
+        <div class="container grid-2">
+            <div class="reveal-left">
+                <h2>The Brewing Standard</h2>
+                <p>We don't chase trends; we perfect styles. Our beers are the result of rigorous experimentation and
+                    respect for historical brewing methods.</p>
+                <p style="margin-top: 20px;">Whether it's the specific mineral content of our water or the temperature
+                    of our fermentation, every variable is controlled to ensure the highest quality pint.</p>
+            </div>
+            <div class="pop-in">
+                <img src="https://images.unsplash.com/photo-1559526323-cb2f2fe2591b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Brewing Tanks" style="border-radius: 8px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Beer List (Existing Grid) -->
+    <section class="section" style="background-color: var(--surface);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Core Range</h2>
+            <div class="grid-3">
+                <!-- Beer 1 -->
+                <div class="card pop-in">
+                    <div style="height: 250px; overflow: hidden; border-radius: 4px; margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Beer" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Golden Lager</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Lager • 5.0% ABV • 20
+                        IBU</p>
+                    <p style="margin-bottom: 20px; font-size: 14px; color: #888;">A crisp, refreshing lager with subtle
+                        floral notes.</p>
+                    <a href="product-details.html?id=golden-lager" class="btn"
+                        style="width: 100%; text-align: center;">Details</a>
+                </div>
+
+                <!-- Beer 2 -->
+                <div class="card pop-in" style="transition-delay: 0.1s;">
+                    <div style="height: 250px; overflow: hidden; border-radius: 4px; margin-bottom: 20px;">
+                        <img src="https://images.pexels.com/photos/13229768/pexels-photo-13229768.jpeg" alt="Beer"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Copper Ale</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Amber Ale • 6.2% ABV
+                        • 45 IBU</p>
+                    <p style="margin-bottom: 20px; font-size: 14px; color: #888;">Caramel malt backbone with a balanced
+                        hop bitterness.</p>
+                    <a href="product-details.html?id=copper-ale" class="btn"
+                        style="width: 100%; text-align: center;">Details</a>
+                </div>
+
+                <!-- Beer 3 -->
+                <div class="card pop-in" style="transition-delay: 0.2s;">
+                    <div style="height: 250px; overflow: hidden; border-radius: 4px; margin-bottom: 20px;">
+                        <img src="https://images.pexels.com/photos/7220280/pexels-photo-7220280.jpeg" alt="Beer"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Midnight Stout</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Stout • 8.5% ABV • 60
+                        IBU</p>
+                    <p style="margin-bottom: 20px; font-size: 14px; color: #888;">Coffee and chocolate notes with a
+                        creamy mouthfeel.</p>
+                    <a href="product-details.html?id=midnight-stout" class="btn"
+                        style="width: 100%; text-align: center;">Details</a>
+                </div>
+
+                <!-- Beer 4 -->
+                <div class="card pop-in">
+                    <div style="height: 250px; overflow: hidden; border-radius: 4px; margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1518176258769-f227c798150e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Beer" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Hazy IPA</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">IPA • 7.0% ABV • 55
+                        IBU</p>
+                    <p style="margin-bottom: 20px; font-size: 14px; color: #888;">Juicy, tropical fruit flavors with low
+                        bitterness.</p>
+                    <a href="product-details.html?id=hazy-ipa" class="btn"
+                        style="width: 100%; text-align: center;">Details</a>
+                </div>
+
+                <!-- Beer 5 -->
+                <div class="card pop-in" style="transition-delay: 0.1s;">
+                    <div style="height: 250px; overflow: hidden; border-radius: 4px; margin-bottom: 20px;">
+                        <img src="https://images.pexels.com/photos/8957321/pexels-photo-8957321.jpeg" alt="Beer"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Berry Sour</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Sour Ale • 4.5% ABV •
+                        10 IBU</p>
+                    <p style="margin-bottom: 20px; font-size: 14px; color: #888;">Tart and refreshing with hints of
+                        raspberry and blackberry.</p>
+                    <a href="product-details.html?id=berry-sour" class="btn"
+                        style="width: 100%; text-align: center;">Details</a>
+                </div>
+
+                <!-- Beer 6 -->
+                <div class="card pop-in" style="transition-delay: 0.2s;">
+                    <div style="height: 250px; overflow: hidden; border-radius: 4px; margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1567696911980-2eed69a46042?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Beer" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Pilsner</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Pilsner • 5.2% ABV •
+                        30 IBU</p>
+                    <p style="margin-bottom: 20px; font-size: 14px; color: #888;">Traditional Czech-style pilsner, spicy
+                        and crisp.</p>
+                    <a href="product-details.html?id=pilsner" class="btn"
+                        style="width: 100%; text-align: center;">Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Seasonal Rotations (New Section) -->
+    <section class="section">
+        <div class="container grid-2">
+            <div class="pop-in">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Seasonal Beer" style="border-radius: 8px;">
+            </div>
+            <div class="reveal-left">
+                <h2>Seasonal Rotations</h2>
+                <p>Because some ingredients are worth waiting for.</p>
+                <div style="margin-top: 20px;">
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="margin-bottom: 5px; color: var(--primary-color);">Harvest Pumpkin Ale</h4>
+                        <p style="font-size: 14px; color: #888;">Available: September - November</p>
+                        <p>Brewed with 200lbs of local pumpkins and spiced with cinnamon and nutmeg.</p>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="margin-bottom: 5px; color: var(--primary-color);">Summer Citrus Wheat</h4>
+                        <p style="font-size: 14px; color: #888;">Available: May - August</p>
+                        <p>Light, unfiltered wheat beer brewed with fresh orange and lemon peel.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline" style="margin-top: 10px;">Check Availability</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Beer Club (New Section) -->
+    <section class="section"
+        style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1571465430221-a20c35478d59?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;">
+        <div class="container" style="text-align: center; color: #fff;">
+            <h2 class="reveal-left">Join The Mug Club</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px; opacity: 0.9;">Get exclusive access to new releases,
+                discounts on every pint, and invitations to members-only parties.</p>
+            <ul style="display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; flex-wrap: wrap;">
+                <li><i class="fas fa-check" style="color: var(--primary-color);"></i> Personal Mug at Taproom</li>
+                <li><i class="fas fa-check" style="color: var(--primary-color);"></i> 10% Off Merch</li>
+                <li><i class="fas fa-check" style="color: var(--primary-color);"></i> First Pours</li>
+            </ul>
+            <a href="contact.html" class="btn">Inquire Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                            class="logo-accent">CREEK</span></div>
+                    <p>Crafting memories, one pint at a time.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="beers.html">Our Beers</a></li>
+                        <li><a href="tour.html">Tours</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>hello@coppercreek.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Copper Creek Brewery. All rights reserved.</p>
+                <div class="back-to-top" onclick="window.scrollTo(0,0)">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Details | Copper Creek Brewery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-hero {
+            padding-top: 140px;
+            padding-bottom: 60px;
+            background-color: var(--surface);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .product-image-container {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-info h1 {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .product-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #888;
+        }
+
+        .product-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .specs-list {
+            margin: 30px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .spec-value {
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .product-info h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                    class="logo-accent">CREEK</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"
+                                style="font-size: 12px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Home 1</a></li>
+                            <li><a href="home-2.html" class="dropdown-item">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="beers.html" class="nav-link active">Beer List</a></li>
+                    <li class="nav-item"><a href="tour.html" class="nav-link">Tours</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn">Sign Up</a>
+                <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Details Section -->
+    <section class="product-hero">
+        <div class="container product-grid">
+            <div class="product-image-container reveal-left">
+                <img id="product-img" src="" alt="Beer Image" style="width: 100%; height: auto; display: block;">
+            </div>
+            <div class="product-info pop-in">
+                <h1 id="product-name">Loading...</h1>
+                <div class="product-meta">
+                    <span id="product-style"><i class="fas fa-tag"></i> Style</span>
+                    <span id="product-abv"><i class="fas fa-percent"></i> ABV</span>
+                    <span id="product-ibu"><i class="fas fa-leaf"></i> IBU</span>
+                </div>
+                <p id="product-desc" style="font-size: 18px; margin-bottom: 20px;">
+                    Loading description...
+                </p>
+
+                <div class="specs-list">
+                    <div class="spec-item">
+                        <span class="spec-label">Ingredients</span>
+                        <span class="spec-value" id="product-ingredients">Loading...</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Tasting Notes</span>
+                        <span class="spec-value" id="product-notes">Loading...</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Food Pairing</span>
+                        <span class="spec-value" id="product-pairing">Loading...</span>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 15px;">
+                    <button class="btn">Find Near Me</button>
+                    <a href="contact.html" class="btn-outline">Distribution Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px;">You Might Also Like</h2>
+            <p
+                style="text-align: center; margin-bottom: 40px; color: #888; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Hand-picked brews that showcase our creativity, crafted for explorers who love discovering something new
+                in every pour.</p>
+            <div class="grid-3" id="related-products">
+                <!-- Related items will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                            class="logo-accent">CREEK</span></div>
+                    <p>Crafting memories, one pint at a time. Join our community of beer enthusiasts.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="beers.html">Our Beers</a></li>
+                        <li><a href="tour.html">Tours</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>hello@coppercreek.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Copper Creek Brewery. All rights reserved.</p>
+                <div class="back-to-top" onclick="window.scrollTo(0,0)">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

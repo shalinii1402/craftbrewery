@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Copper Creek Brewery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                    class="logo-accent">CREEK</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"
+                                style="font-size: 12px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Home 1</a></li>
+                            <li><a href="home-2.html" class="dropdown-item">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="beers.html" class="nav-link">Beer List</a></li>
+                    <li class="nav-item"><a href="tour.html" class="nav-link">Tours</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn">Sign Up</a>
+                <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero -->
+    <section class="hero"
+        style="min-height: 40vh; height: auto; padding-top: 150px; padding-bottom: 50px; background-image: url('https://images.unsplash.com/photo-1555658636-6e4a36218a5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-content">
+            <h1 class="hero-title" style="font-size: 48px;">Get In Touch</h1>
+            <p class="hero-subtitle">We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- 2. Contact Info & Form -->
+    <section class="section">
+        <div class="container grid-2">
+            <div class="reveal-left">
+                <h2>Contact Information</h2>
+                <p style="margin-bottom: 30px;">Have questions about our beers, events, or booking a private party?
+                    Reach out to us directly or fill out the form.</p>
+
+                <ul style="margin-bottom: 40px;">
+                    <li style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-map-marker-alt"
+                            style="color: var(--primary-color); font-size: 24px; width: 30px; text-align: center;"></i>
+                        <div>
+                            <strong style="display: block;">Address</strong>
+                            123 Brewery Lane, Craft City, ST 12345
+                        </div>
+                    </li>
+                    <li style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-phone"
+                            style="color: var(--primary-color); font-size: 24px; width: 30px; text-align: center;"></i>
+                        <div>
+                            <strong style="display: block;">Phone</strong>
+                            (555) 123-4567
+                        </div>
+                    </li>
+                    <li style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-envelope"
+                            style="color: var(--primary-color); font-size: 24px; width: 30px; text-align: center;"></i>
+                        <div>
+                            <strong style="display: block;">Email</strong>
+                            hello@coppercreek.com
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card pop-in">
+                <form>
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 8px;">Name</label>
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 8px;">Email</label>
+                        <input type="email" class="form-control" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 8px;">Subject</label>
+                        <input type="text" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 8px;">Message</label>
+                        <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Wholesale Inquiries (New Section) -->
+    <section class="section" style="background-color: var(--surface);">
+        <div class="container grid-2">
+            <div class="pop-in">
+                <img src="https://images.unsplash.com/photo-1577909388145-81676646700c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Kegs Delivery" style="border-radius: 8px;">
+            </div>
+            <div class="reveal-left">
+                <h2>Wholesale Inquiries</h2>
+                <p>Want to put Copper Creek on tap at your bar or restaurant? We self-distribute in the Craft City area
+                    and work with partners statewide.</p>
+                <p style="margin-top: 20px;">Contact our sales team directly for a current price sheet and availability.
+                </p>
+                <div style="margin-top: 20px; display: flex; gap: 15px;">
+                    <a href="mailto:sales@coppercreek.com" class="btn">Email Sales</a>
+                    <a href="tel:5559876543" class="btn-outline">Call Distribution</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FAQ (New Section) -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="text-align: center; margin-bottom: 50px;">Frequently Asked Questions</h2>
+
+            <div class="card pop-in" style="margin-bottom: 20px;">
+                <h4 style="margin-bottom: 10px; color: var(--primary-color);">Are you dog friendly?</h4>
+                <p style="color: #888;">Yes! Well-behaved dogs on leashes are welcome on our patio and in the taproom.
+                </p>
+            </div>
+            <div class="card pop-in" style="margin-bottom: 20px;">
+                <h4 style="margin-bottom: 10px; color: var(--primary-color);">Do you serve food?</h4>
+                <p style="color: #888;">We have a rotating schedule of food trucks every day. You are also welcome to
+                    bring your own food.</p>
+            </div>
+            <div class="card pop-in">
+                <h4 style="margin-bottom: 10px; color: var(--primary-color);">Are kids allowed?</h4>
+                <p style="color: #888;">Yes, children are allowed until 8 PM when accompanied by a parent or guardian.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Map Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.50764020443903!3d37.757814996609724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1645559868726!5m2!1sen!2sus"
+                width="100%" height="450" style="border:0; border-radius: 8px; filter: grayscale(1) invert(1);"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                            class="logo-accent">CREEK</span></div>
+                    <p>Crafting memories since 2012.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="beers.html">Our Beers</a></li>
+                        <li><a href="tour.html">Tours</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>hello@coppercreek.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Copper Creek Brewery. All rights reserved.</p>
+                <div class="back-to-top" onclick="window.scrollTo(0,0)">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
