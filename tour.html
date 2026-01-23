@@ -56,34 +56,46 @@
         style="background-image: url('https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
         <div class="hero-content">
             <h1 class="hero-title">Brewery Tours</h1>
-            <p class="hero-subtitle">Step inside and see the craft in action.</p>
+            <p class="hero-subtitle">Step Inside and See the Craft in Action</p>
+            <p style="max-width: 650px; margin: 20px auto 0; font-size: 18px; line-height: 1.6; opacity: 0.9;">
+                Experience the magic of Copper Creek firsthand. Join our immersive brewery tour and discover the
+                artistry,
+                dedication, and science that transform raw ingredients into our signature craft brews.
+                From the hum of the tanks to the depth of the flavor, see where the soul of our beer is truly born.
+            </p>
         </div>
     </section>
 
     <!-- 2. Tour Details / Booking -->
     <section class="section">
-        <div class="container grid-2">
-            <div class="reveal-left">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div class="reveal-left" style="max-width: 800px; margin-bottom: 50px;">
                 <h2>The Experience</h2>
                 <p>Join our expert guides on a 60-minute journey through our brewing facility. You'll learn about:</p>
-                <ul style="margin: 20px 0; padding-left: 20px; list-style: disc;">
-                    <li style="margin-bottom: 10px;">The history of Copper Creek</li>
-                    <li style="margin-bottom: 10px;">Our unique brewing process</li>
-                    <li style="margin-bottom: 10px;">Ingredients sourcing</li>
-                    <li style="margin-bottom: 10px;">Packaging and distribution</li>
+                <ul
+                    style="margin: 20px 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-history" style="color: var(--primary-color);"></i>
+                        The history of Copper Creek</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-flask" style="color: var(--primary-color);"></i>
+                        Our unique brewing process</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-leaf" style="color: var(--primary-color);"></i>
+                        Ingredients sourcing</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-box" style="color: var(--primary-color);"></i>
+                        Packaging and distribution</li>
                 </ul>
-                <p><strong>Includes:</strong> A flight of 4 tasters and a souvenir glass.</p>
-                <p><strong>Price:</strong> $25 per person</p>
+                <p style="font-size: 18px; margin-top: 20px;"><strong>Includes:</strong> A flight of 4 tasters and a
+                    souvenir glass.</p>
+                <p style="font-size: 20px; color: var(--primary-color); font-weight: 700;">$25 per person</p>
             </div>
 
-            <div class="card pop-in">
+            <div class="card pop-in" style="width: 100%; max-width: 500px;">
                 <h3 style="margin-bottom: 20px;">Book Your Spot</h3>
                 <form>
-                    <div style="margin-bottom: 20px;">
+                    <div style="margin-bottom: 20px; text-align: left;">
                         <label style="display: block; margin-bottom: 8px;">Date</label>
                         <input type="date" class="form-control">
                     </div>
-                    <div style="margin-bottom: 20px;">
+                    <div style="margin-bottom: 20px; text-align: left;">
                         <label style="display: block; margin-bottom: 8px;">Time</label>
                         <select class="form-control">
                             <option>12:00 PM</option>
@@ -92,7 +104,7 @@
                             <option>6:00 PM</option>
                         </select>
                     </div>
-                    <div style="margin-bottom: 20px;">
+                    <div style="margin-bottom: 20px; text-align: left;">
                         <label style="display: block; margin-bottom: 8px;">Number of Guests</label>
                         <input type="number" min="1" max="10" class="form-control" value="2">
                     </div>
@@ -114,30 +126,69 @@
                         alt="Brewhouse"
                         style="border-radius: 4px; margin-bottom: 15px; width: 100%; height: 200px; object-fit: cover;">
                     <h4>The Brewhouse</h4>
-                    <p style="color: #888; font-size: 14px;">See our 30-barrel brewing system up close and smell the
-                        mash.</p>
+                    <p style="color: #888; font-size: 14px;">Witness the start of the journey in our custom-built
+                        30-barrel system. Smell the toasted grain and feel the heat of the kettle.</p>
                 </div>
                 <div class="card reveal-left" style="transition-delay: 0.1s;">
                     <img src="https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                         alt="Fermentation"
                         style="border-radius: 4px; margin-bottom: 15px; width: 100%; height: 200px; object-fit: cover;">
                     <h4>Fermentation Alley</h4>
-                    <p style="color: #888; font-size: 14px;">Walk among the towering stainless steel tanks where the
-                        magic happens.</p>
+                    <p style="color: #888; font-size: 14px;">Stand among the giants. Our massive fermentation vessels
+                        are where yeast works its magic under precise temperature control.</p>
                 </div>
                 <div class="card reveal-left" style="transition-delay: 0.2s;">
                     <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                         alt="Tasting Room"
                         style="border-radius: 4px; margin-bottom: 15px; width: 100%; height: 200px; object-fit: cover;">
-                    <h4>Guided Tasting</h4>
-                    <p style="color: #888; font-size: 14px;">End the tour with a curated flight led by one of our
-                        certified Cicerones.</p>
+                    <h4>Cicerone-Led Tasting</h4>
+                    <p style="color: #888; font-size: 14px;">Refine your palate. Learn to identify notes of citrus,
+                        pine, chocolate, and spice in our curated post-tour tasting flight.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Private Events (New Section) -->
+    <!-- 4. Added Content Blocks -->
+    <section class="section">
+        <div class="container grid-2">
+            <div class="reveal-left">
+                <h2>Behind-the-Scenes Insights</h2>
+                <p>Go where the public can't. Get an exclusive look at our quality control lab, raw ingredient storage,
+                    and our unique barrel-aging program. Understand the complexity of our water chemistry and yeast
+                    management that gives Copper Creek beers their distinct personality.</p>
+                <div style="margin-top: 30px;">
+                    <a href="about.html" class="btn btn-outline">Our Philosophy</a>
+                </div>
+            </div>
+            <div class="pop-in">
+                <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Brewing Lab" style="border-radius: 8px;">
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--surface);">
+        <div class="container grid-2">
+            <div class="pop-in">
+                <img src="https://images.unsplash.com/photo-1518176258769-f227c798150e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Guided Tasting" style="border-radius: 8px;">
+            </div>
+            <div class="reveal-left">
+                <h2>Guided Tasting Experiences</h2>
+                <p>It's not just about drinking; it's about appreciation. Our tours conclude with a deep dive into
+                    sensory analysis. Learn how to evaluate appearance, aroma, mouthfeel, and finish under the guidance
+                    of our masters.</p>
+                <p style="margin-top: 20px;">Discover the science of food and beer pairing during a guided session that
+                    will change the way you enjoy your next pint.</p>
+                <div style="margin-top: 30px;">
+                    <a href="beers.html" class="btn">View Beer List</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Private Events (New Section) -->
     <section class="section">
         <div class="container grid-2">
             <div class="pop-in">
