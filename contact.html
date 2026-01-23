@@ -62,10 +62,17 @@
 
     <!-- 1. Hero -->
     <section class="hero"
-        style="min-height: 40vh; height: auto; padding-top: 150px; padding-bottom: 50px; background-image: url('https://images.unsplash.com/photo-1555658636-6e4a36218a5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
-        <div class="hero-content">
-            <h1 class="hero-title" style="font-size: 48px;">Get In Touch</h1>
-            <p class="hero-subtitle">We'd love to hear from you.</p>
+        style="height: 60vh; min-height: 500px; display: flex; align-items: center; justify-content: center; position: relative; background-image: url('https://images.unsplash.com/photo-1555658636-6e4a36218a5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; margin-top: -80px; padding-top: 80px;">
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1;">
+        </div>
+        <div class="hero-content"
+            style="position: relative; z-index: 2; text-align: center; color: #fff; max-width: 800px; padding: 0 20px;">
+            <h1 class="hero-title" style="font-size: 56px; margin-bottom: 20px;">Get In Touch</h1>
+            <p class="hero-subtitle" style="font-size: 20px; font-weight: 300; margin-bottom: 10px; opacity: 0.9;">We'd
+                love to hear from you. Reach out for any inquiries.</p>
+            <p style="font-size: 18px; font-weight: 300; opacity: 0.8;">Whether it's a reservation or just to say hello,
+                we are here.</p>
         </div>
     </section>
 
@@ -103,6 +110,19 @@
                         </div>
                     </li>
                 </ul>
+
+                <h3 style="margin-bottom: 20px;">Follow Us</h3>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#" style="font-size: 24px; color: var(--text); transition: color 0.3s;"
+                        onmouseover="this.style.color='var(--primary-color)'"
+                        onmouseout="this.style.color='var(--text)'"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="font-size: 24px; color: var(--text); transition: color 0.3s;"
+                        onmouseover="this.style.color='var(--primary-color)'"
+                        onmouseout="this.style.color='var(--text)'"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="font-size: 24px; color: var(--text); transition: color 0.3s;"
+                        onmouseover="this.style.color='var(--primary-color)'"
+                        onmouseout="this.style.color='var(--text)'"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
 
             <div class="card pop-in">
@@ -123,7 +143,7 @@
                         <label style="display: block; margin-bottom: 8px;">Message</label>
                         <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
                     </div>
-                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    <button type="submit" class="btn" style="width: auto; padding: 10px 30px;">Send Message</button>
                 </form>
             </div>
         </div>
@@ -136,15 +156,17 @@
                 <img src="https://images.unsplash.com/photo-1577909388145-81676646700c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     alt="Kegs Delivery" style="border-radius: 8px;">
             </div>
-            <div class="reveal-left">
+            <div class="reveal-left" style="text-align: center;">
                 <h2>Wholesale Inquiries</h2>
                 <p>Want to put Copper Creek on tap at your bar or restaurant? We self-distribute in the Craft City area
                     and work with partners statewide.</p>
                 <p style="margin-top: 20px;">Contact our sales team directly for a current price sheet and availability.
                 </p>
-                <div style="margin-top: 20px; display: flex; gap: 15px;">
-                    <a href="mailto:sales@coppercreek.com" class="btn">Email Sales</a>
-                    <a href="tel:5559876543" class="btn-outline">Call Distribution</a>
+                <div style="margin-top: 20px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:sales@coppercreek.com" class="btn" style="width: 180px; text-align: center;">Email
+                        Sales</a>
+                    <a href="tel:5559876543" class="btn-outline" style="width: 180px; text-align: center;">Call
+                        Distributor</a>
                 </div>
             </div>
         </div>
@@ -177,8 +199,8 @@
     <section class="section" style="padding-top: 0;">
         <div class="container">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.50764020443903!3d37.757814996609724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1645559868726!5m2!1sen!2sus"
-                width="100%" height="450" style="border:0; border-radius: 8px; filter: grayscale(1) invert(1);"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0636832442475!2d-122.41941608468205!3d37.77492927975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1645561000000!5m2!1sen!2sus"
+                width="100%" height="400" style="border:0; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"
                 allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
