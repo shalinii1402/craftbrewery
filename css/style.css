@@ -237,29 +237,35 @@ header {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
     background-color: var(--surface);
-    min-width: 200px;
+    min-width: 120px;
+    width: max-content;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
     transition: var(--transition);
-    padding: 10px 0;
+    padding: 5px 0;
+    z-index: 100;
 }
 
 .nav-item:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 .dropdown-item {
-    display: block;
-    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
     color: var(--text);
     font-size: 14px;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .dropdown-item:hover {
