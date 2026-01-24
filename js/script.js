@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+
+            // Toggle body scroll to keep menu in viewport and prevent background movement
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+
             hamburger.innerHTML = navLinks.classList.contains('active')
                 ? '<i class="fas fa-times"></i>'
                 : '<i class="fas fa-bars"></i>';
@@ -63,6 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.appendChild(mobileAuthDiv);
             }
         }
+
+        // Close menu when clicking links (for anchor links and navigation)
+        const links = navLinks.querySelectorAll('a:not(.nav-link)'); // Select all links except dropdown toggles
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1024) {
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
     }
 
     // Theme Toggle

@@ -591,23 +591,27 @@ footer {
     .nav-links {
         position: fixed;
         top: 80px;
-        left: -100%;
+        left: 0;
         width: 100%;
         height: calc(100vh - 80px);
+        height: calc(100dvh - 80px);
         background-color: var(--background);
-        border-right: 1px solid var(--border);
+        border-top: 1px solid var(--border);
         flex-direction: column;
         justify-content: flex-start;
         padding: 40px 20px 80px;
-        /* Extra bottom padding for scroll space */
-        transition: var(--transition);
         overflow-y: auto;
-        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+        overscroll-behavior: contain;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         gap: 10px;
+        z-index: 1000;
+        display: none;
+        /* Hide by default on mobile */
     }
 
     .nav-links.active {
-        left: 0;
+        display: flex;
+        /* Instant open */
     }
 
     .grid-2,
