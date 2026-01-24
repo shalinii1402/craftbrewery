@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p style="color: #888; margin-bottom: 15px; font-size: 14px;">${relProduct.style}</p>
                          <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="font-weight: 700; color: var(--primary-color);">${relProduct.abv}</span>
-                            <a href="product-details.html?id=${id}" class="btn-outline" style="padding: 8px 20px; font-size: 12px;">Details</a>
+                            <a href="product-details.html?id=${id}" class="btn btn-outline" style="padding: 8px 20px; font-size: 12px;">Details</a>
                         </div>
                    `;
                     relatedContainer.appendChild(card);

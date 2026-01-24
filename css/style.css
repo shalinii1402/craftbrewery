@@ -128,7 +128,9 @@ iframe {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 30px;
     background-color: var(--primary-color);
     color: var(--background-dark);
@@ -139,6 +141,7 @@ iframe {
     border: 2px solid var(--primary-color);
     cursor: pointer;
     font-size: 14px;
+    transition: var(--transition);
 }
 
 .btn:hover {
