@@ -309,7 +309,8 @@ header {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -318,9 +319,8 @@ header {
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    margin-top: -80px;
-    /* Offset header */
-    padding-top: 80px;
+    padding-top: 100px;
+    /* Base padding to clear fixed header */
 }
 
 .hero::after {
