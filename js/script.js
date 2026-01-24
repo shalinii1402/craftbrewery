@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             style: "Wheat Ale",
             abv: "4.9%",
             ibu: "15",
-            image: "https://images.unsplash.com/photo-1584225064785-c62a8b43d148?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+            image: "https://images.pexels.com/photos/35743430/pexels-photo-35743430.jpeg",
             description: "Light-bodied and smooth with a touch of natural honey sweetness and a refreshing finish. An easy drinker for sunny days.",
             ingredients: "Wheat Malt, Local Honey, Hallertau Hops",
             notes: "Honey, Bread, Floral, Smooth",
