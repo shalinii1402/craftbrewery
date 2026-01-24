@@ -42,7 +42,7 @@
     --transition: all 0.3s ease;
 
     /* Spacing */
-    --section-padding: 80px 20px;
+    --section-padding: 60px 20px;
     --container-width: 1200px;
 }
 
@@ -310,7 +310,7 @@ header {
 /* Hero Section */
 .hero {
     height: auto;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -319,8 +319,8 @@ header {
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    padding-top: 100px;
-    /* Base padding to clear fixed header */
+    padding-top: 80px;
+    /* Reduced padding to clear fixed header */
 }
 
 .hero::after {
@@ -341,6 +341,7 @@ header {
     padding: 20px;
     color: #fff;
     /* Always white on hero bg */
+    margin: 0 auto;
 }
 
 .hero-title {
@@ -443,8 +444,8 @@ header {
 footer {
     background-color: var(--surface);
     color: var(--text);
-    padding: 80px 0 20px;
-    margin-top: 80px;
+    padding: 60px 0 20px;
+    margin-top: 60px;
     border-top: 1px solid var(--border);
 }
 
