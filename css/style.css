@@ -684,8 +684,15 @@ footer {
     .mobile-auth-container .btn,
     .mobile-auth-container .btn-outline {
         width: 100%;
-        text-align: center;
-        margin: 0;
+        max-width: 250px;
+        /* Reduced width */
+        margin: 0 auto;
+        /* Center align */
+        padding: 10px 20px;
+        /* More compact sizing */
+        display: flex;
+        /* Ensure they behave consistently */
+        justify-content: center;
     }
 
     /* Mobile Auth in Nav */
@@ -699,7 +706,11 @@ footer {
 
     .nav-links .auth-mobile .btn {
         width: 100%;
-        text-align: center;
+        max-width: 250px;
+        margin: 0 auto;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
     }
 
     .hero-title {
