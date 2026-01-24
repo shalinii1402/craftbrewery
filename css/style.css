@@ -687,7 +687,8 @@ footer {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 1001;
+    z-index: 900;
+    /* Ensure it stays below mobile menu (z-1000) */
 }
 
 .back-to-top:hover {
@@ -822,12 +823,19 @@ footer {
 
     .dropdown-item {
         padding: 12px 20px;
-        font-size: 16px;
+        font-size: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         width: 100%;
+        white-space: nowrap;
+        /* Prevent breaking */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .dropdown-item:last-child {
+        border-bottom: none;
     }
 
     .nav-link {
@@ -853,40 +861,38 @@ footer {
         height: 40px;
     }
 
-    /* Ensure the auth-buttons container stays visible for the hamburger */
+    /* Ensure the auth-buttons container stays visible and spaced for the hamburger */
     .auth-buttons {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 20px;
+        /* Increased spacing between theme icon and hamburger */
     }
 
-
-    /* Hide the specific login/signup buttons in the header on mobile (they are in the menu) */
-    .auth-buttons .btn,
-    .auth-buttons .btn-outline {
-        display: none;
+    .navbar {
+        gap: 20px;
+        /* Spacing between logo and auth-buttons */
     }
 
     /* Show the mobile auth container in the nav menu */
     .mobile-auth-container {
         display: flex !important;
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
         width: 100%;
-        margin-top: 20px;
+        margin-top: 25px;
+        padding: 0 10px;
     }
 
     .mobile-auth-container .btn,
     .mobile-auth-container .btn-outline {
         width: 100%;
-        max-width: 250px;
-        /* Reduced width */
+        max-width: 180px;
+        /* Smaller buttons as requested */
         margin: 0 auto;
-        /* Center align */
-        padding: 10px 20px;
-        /* More compact sizing */
+        padding: 8px 15px;
+        font-size: 12px;
         display: flex;
-        /* Ensure they behave consistently */
         justify-content: center;
     }
 
