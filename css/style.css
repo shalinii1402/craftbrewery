@@ -48,6 +48,7 @@
 
 /* Light Mode Variables */
 [data-theme="light"] {
+    color-scheme: light;
     --background: var(--background-light);
     --surface: var(--surface-light);
     --text: var(--text-light);
@@ -58,6 +59,7 @@
 
 /* Dark Mode Variables (Default) */
 [data-theme="dark"] {
+    color-scheme: dark;
     --background: var(--background-dark);
     --surface: var(--surface-dark);
     --text: var(--text-dark);
@@ -227,6 +229,21 @@ textarea.form-control {
 
 .form-control:hover {
     border-color: var(--primary-color);
+}
+
+/* Fix for native date/time pickers in dark mode */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(var(--theme-invert, 0));
+}
+
+[data-theme="dark"] {
+    --theme-invert: 0.8;
+}
+
+[data-theme="light"] {
+    --theme-invert: 0.2;
 }
 
 .card form {
