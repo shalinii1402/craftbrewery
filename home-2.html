@@ -7,6 +7,28 @@
     <title>Copper Creek | The Brand Experience</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Scoped styles for Home 2 to ensure balanced image sizes */
+        .home2-section-img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .home2-card-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .home2-section-img {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -79,10 +101,9 @@
                     <a href="#process" class="btn">Our Process</a>
                 </div>
             </div>
-            <div class="pop-in" style="position: relative; width: 100%; max-width: 700px;">
+            <div class="pop-in" style="position: relative; width: 100%; max-width: 600px;">
                 <img src="https://images.pexels.com/photos/12973599/pexels-photo-12973599.jpeg"
-                    alt="Pouring Perfect Pint"
-                    style="border-radius: 20px; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                    alt="Pouring Perfect Pint" class="home2-section-img" style="border-radius: 20px;">
                 <div
                     style="position: absolute; bottom: -30px; right: -20px; background: var(--background); padding: 20px; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     <h4 style="margin-bottom: 5px;">Award Winning</h4>
@@ -103,9 +124,9 @@
                     and innovation.</p>
                 <a href="about.html" class="btn" style="margin-top: 20px;">Read Full Story</a>
             </div>
-            <div class="pop-in" style="width: 100%; max-width: 700px;">
+            <div class="pop-in" style="width: 100%; max-width: 600px;">
                 <img src="https://images.pexels.com/photos/6366898/pexels-photo-6366898.jpeg" alt="Wooden Barrels"
-                    style="border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.3); width: 100%;">
+                    class="home2-section-img">
             </div>
         </div>
     </section>
@@ -122,7 +143,7 @@
                 <div class="card reveal-left"
                     style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0; overflow: hidden; border: none;">
                     <img src="https://images.pexels.com/photos/33829588/pexels-photo-33829588.jpeg"
-                        alt="Purity of Ingredients" style="width: 100%; height: 200px; object-fit: cover;">
+                        alt="Purity of Ingredients" class="home2-card-img">
                     <div style="padding: 30px;">
                         <h4 style="margin-bottom: 15px; color: var(--primary-color);">Purity of Ingredients</h4>
                         <p style="color: #888; font-size: 14px; line-height: 1.6;">We source only the finest hops and
@@ -133,7 +154,7 @@
                 <div class="card reveal-left"
                     style="transition-delay: 0.1s; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0; overflow: hidden; border: none;">
                     <img src="https://images.pexels.com/photos/8442281/pexels-photo-8442281.jpeg"
-                        alt="Scientific Precision" style="width: 100%; height: 200px; object-fit: cover;">
+                        alt="Scientific Precision" class="home2-card-img">
                     <div style="padding: 30px;">
                         <h4 style="margin-bottom: 15px; color: var(--primary-color);">Scientific Precision</h4>
                         <p style="color: #888; font-size: 14px; line-height: 1.6;">Every batch is tested in our
@@ -143,7 +164,7 @@
                 <div class="card reveal-left"
                     style="transition-delay: 0.2s; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0; overflow: hidden; border: none;">
                     <img src="https://images.pexels.com/photos/1267287/pexels-photo-1267287.jpeg"
-                        alt="Sustainable Practices" style="width: 100%; height: 200px; object-fit: cover;">
+                        alt="Sustainable Practices" class="home2-card-img">
                     <div style="padding: 30px;">
                         <h4 style="margin-bottom: 15px; color: var(--primary-color);">Sustainable Practices</h4>
                         <p style="color: #888; font-size: 14px; line-height: 1.6;">100% renewable energy powered brewery
@@ -175,9 +196,9 @@
                                 style="color: var(--primary-color); width: 25px;"></i> Board Games & Trivia</li>
                     </ul>
                 </div>
-                <div class="pop-in" style="width: 100%; max-width: 700px;">
+                <div class="pop-in" style="width: 100%; max-width: 600px;">
                     <img src="https://images.pexels.com/photos/3922818/pexels-photo-3922818.jpeg"
-                        alt="Busy Taproom Atmosphere" style="border-radius: 8px; width: 100%;">
+                        alt="Busy Taproom Atmosphere" class="home2-section-img">
                 </div>
             </div>
         </div>
