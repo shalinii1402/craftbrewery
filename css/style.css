@@ -528,6 +528,7 @@ footer {
         justify-content: flex-start;
         padding: 40px;
         transition: var(--transition);
+        overflow-y: auto;
     }
 
     .nav-links.active {
@@ -539,6 +540,43 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Mobile Dropdown Fix */
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        /* Controlled by active class or hover */
+        transform: none;
+        box-shadow: none;
+        background-color: transparent;
+        min-width: 100%;
+        padding: 5px 0;
+        margin-top: 5px;
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-item {
+        padding: 8px 0;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+    }
+
 
     .footer-bottom {
         padding-bottom: 60px;

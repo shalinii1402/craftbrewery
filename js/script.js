@@ -20,6 +20,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 : '<i class="fas fa-bars"></i>';
         });
 
+        // Mobile Dropdown Toggle
+        const dropdownItems = document.querySelectorAll('.nav-item');
+        dropdownItems.forEach(item => {
+            const link = item.querySelector('.nav-link');
+            const menu = item.querySelector('.dropdown-menu');
+
+            if (menu && link) {
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const isVisible = getComputedStyle(menu).display === 'block';
+
+                        // Close other dropdowns first
+                        document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+
+                        // Toggle current
+                        menu.style.display = isVisible ? 'none' : 'block';
+                    }
+                });
+            }
+        });
+
         // Dynamic helper: Clone auth buttons to mobile menu if not already present
         if (!document.querySelector('.nav-links .mobile-auth-container')) {
             const authBtns = document.querySelectorAll('.auth-buttons .btn, .auth-buttons .btn-outline');
