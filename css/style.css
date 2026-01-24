@@ -88,6 +88,8 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
     width: 100%;
+    text-align: center;
+    /* Set global text alignment to center */
 }
 
 
@@ -101,6 +103,8 @@ h6 {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
+    text-align: center;
+    /* Default to center alignment per user request */
 }
 
 a {
@@ -127,10 +131,17 @@ iframe {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section {
     padding: var(--section-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .btn {
@@ -148,6 +159,8 @@ iframe {
     cursor: pointer;
     font-size: 14px;
     transition: var(--transition);
+    margin: 0 auto;
+    /* Ensure buttons can be centered if they are block/inline-block */
 }
 
 .btn:hover {
@@ -419,12 +432,17 @@ header {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
+    justify-items: center;
+    width: 100%;
 }
 
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    align-items: start;
+    justify-items: center;
+    width: 100%;
 }
 
 .card {
@@ -433,6 +451,15 @@ header {
     border-radius: 8px;
     border: 1px solid var(--border);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.card img {
+    margin: 0 auto 20px;
 }
 
 .card:hover {
@@ -546,18 +573,17 @@ footer {
     background: var(--primary-hover);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .container {
-        max-width: 90%;
-    }
-
-    .hero-title {
-        font-size: 48px;
-    }
+/* Utility for centering any block */
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 1024px) {
     .hamburger {
         display: block;
     }
@@ -587,8 +613,21 @@ footer {
     .grid-2,
     .grid-3,
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        text-align: center;
     }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .auth-buttons .btn,
+    .auth-buttons .btn-outline {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
 
     /* Mobile Dropdown Fix */
     .nav-item {
@@ -662,7 +701,7 @@ footer {
     .auth-buttons {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 15px;
     }
 
 
@@ -730,6 +769,15 @@ footer {
         margin: 0 !important;
         text-align: center;
         min-width: 0;
-        /* Remove any potential min-width */
+    }
+
+    /* Force all grid items to center text on mobile */
+    .grid-2>*,
+    .grid-3>* {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
     }
 }
