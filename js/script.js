@@ -30,13 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.addEventListener('click', (e) => {
                     if (window.innerWidth <= 768) {
                         e.preventDefault();
-                        const isVisible = getComputedStyle(menu).display === 'block';
+                        const isCurrentlyShow = menu.classList.contains('show');
 
-                        // Close other dropdowns first
-                        document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+                        // Close ALL dropdowns first
+                        document.querySelectorAll('.dropdown-menu').forEach(m => {
+                            m.classList.remove('show');
+                        });
 
-                        // Toggle current
-                        menu.style.display = isVisible ? 'none' : 'block';
+                        // Toggle the clicked one
+                        if (!isCurrentlyShow) {
+                            menu.classList.add('show');
+                        }
                     }
                 });
             }

@@ -571,12 +571,13 @@ footer {
         background-color: var(--background);
         border-right: 1px solid var(--border);
         flex-direction: column;
-        justify-content: center;
-        padding: 20px;
+        justify-content: flex-start;
+        padding: 40px 20px 80px;
+        /* Extra bottom padding for scroll space */
         transition: var(--transition);
-        overflow: hidden;
+        overflow-y: auto;
         box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
-        gap: 20px;
+        gap: 10px;
     }
 
     .nav-links.active {
@@ -600,29 +601,48 @@ footer {
         opacity: 1;
         visibility: visible;
         display: none;
-        /* Controlled by active class or hover */
         transform: none;
         box-shadow: none;
-        background-color: transparent;
+        background-color: var(--surface);
+        /* Better visibility */
         min-width: 100%;
         padding: 5px 0;
-        margin-top: 5px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+    }
+
+    .dropdown-menu.show {
+        display: block;
     }
 
     .nav-item:hover .dropdown-menu {
+        display: none;
+        /* Disable hover on mobile */
+    }
+
+    .nav-item:hover .dropdown-menu.show {
         display: block;
     }
 
     .dropdown-item {
-        padding: 8px 0;
-        font-size: 15px;
+        padding: 12px 20px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+        width: 100%;
     }
 
     .nav-link {
-        display: block;
-        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 0;
         width: 100%;
+        gap: 10px;
+        font-size: 18px;
     }
 
 
