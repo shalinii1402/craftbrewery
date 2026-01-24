@@ -184,14 +184,24 @@ header {
     font-weight: 700;
     color: var(--primary-color);
     letter-spacing: 2px;
-    cursor: default;
+    cursor: pointer;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.logo i {
+    font-size: 22px;
 }
 
 .logo-accent {
     color: var(--text);
     transition: var(--transition);
 }
+
+
 
 .nav-links {
     display: flex;
@@ -266,14 +276,20 @@ header {
     color: var(--text);
     font-size: 20px;
     cursor: pointer;
-    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .hamburger {
     display: none;
     cursor: pointer;
     font-size: 24px;
+    width: 24px;
+    text-align: center;
 }
+
 
 /* Hero Section */
 .hero {
@@ -536,7 +552,10 @@ footer {
     /* Ensure the auth-buttons container stays visible for the hamburger */
     .auth-buttons {
         display: flex;
+        align-items: center;
+        gap: 20px;
     }
+
 
     /* Hide the specific login/signup buttons in the header on mobile (they are in the menu) */
     .auth-buttons .btn,
