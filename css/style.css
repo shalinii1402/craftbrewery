@@ -570,11 +570,12 @@ footer {
         background-color: var(--background);
         border-right: 1px solid var(--border);
         flex-direction: column;
-        justify-content: flex-start;
-        padding: 40px;
+        justify-content: center;
+        padding: 20px;
         transition: var(--transition);
-        overflow-y: auto;
+        overflow: hidden;
         box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+        gap: 20px;
     }
 
     .nav-links.active {
