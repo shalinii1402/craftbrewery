@@ -254,6 +254,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     align-items: flex-start;
     text-align: left;
     padding: 40px;
+    overflow: visible;
+    /* Ensure native pickers are not cut off */
 }
 
 .form-control::placeholder {
@@ -456,6 +458,13 @@ header {
     position: relative;
     padding-top: 80px;
     /* Reduced padding to clear fixed header */
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        background-attachment: scroll;
+        /* Fixed is buggy on mobile/tablets */
+    }
 }
 
 .hero::after {
@@ -752,6 +761,11 @@ footer {
         /* More compact header */
     }
 
+    .card.form-container {
+        padding: 30px 20px;
+        /* Reduced padding on mobile */
+    }
+
     .logo {
         margin-right: 0;
         font-size: 20px;
@@ -941,5 +955,21 @@ footer {
         align-items: center;
         text-align: center;
         width: 100%;
+    }
+
+    /* Prevent horizontal overflow issues with forms */
+    .form-group,
+    .form-control {
+        max-width: 100%;
+        overflow: visible;
+    }
+
+    .container {
+        overflow: visible;
+        /* Prevent cutting off floating pickers */
+    }
+
+    section {
+        overflow: visible;
     }
 }
