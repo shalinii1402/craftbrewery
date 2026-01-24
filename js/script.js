@@ -307,4 +307,31 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.innerHTML = '<div class="container" style="padding-top: 150px; text-align: center;"><h1>Product Not Found</h1><a href="beers.html" class="btn">Back to Beers</a></div>';
         }
     }
+
+    // Shop Filtering Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const shopCards = document.querySelectorAll('.shop-card');
+
+    if (filterButtons.length > 0 && shopCards.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filterValue = button.getAttribute('data-filter');
+
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Filter cards
+                shopCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                        // Re-trigger reveal animation if needed
+                        card.classList.add('active');
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
 });

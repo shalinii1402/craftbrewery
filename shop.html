@@ -54,9 +54,10 @@
 <body>
     <header>
         <div class="container navbar">
-            <a href="index.html" class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+            <a href="index.html" class="logo"><i class="fas fa-beer"></i>COPPER<span
                     class="logo-accent">CREEK</span></a>
-            <nav>
+
+            <nav class="nav-container">
                 <ul class="nav-links">
                     <li class="nav-item">
                         <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"
@@ -72,13 +73,14 @@
                     <li class="nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+
+                <div class="auth-buttons">
+                    <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn">Sign Up</a>
+                    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+                </div>
             </nav>
-            <div class="auth-buttons">
-                <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
-                <a href="login.html" class="btn btn-outline">Login</a>
-                <a href="signup.html" class="btn">Sign Up</a>
-                <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-            </div>
         </div>
     </header>
 
@@ -138,15 +140,15 @@
 
             <!-- Categories Filter -->
             <div class="shop-filter">
-                <button class="filter-btn active">All Items</button>
-                <button class="filter-btn">Apparel</button>
-                <button class="filter-btn">Accessories</button>
-                <button class="filter-btn">Glassware</button>
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="apparel">Apparel</button>
+                <button class="filter-btn" data-filter="accessories">Accessories</button>
+                <button class="filter-btn" data-filter="glassware">Glassware</button>
             </div>
 
             <div class="grid-3">
                 <!-- Apparel Item -->
-                <div class="card pop-in" style="position: relative;">
+                <div class="card pop-in shop-card" data-category="apparel" style="position: relative;">
                     <div class="product-badge">Best Seller</div>
                     <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                         alt="T-Shirt"
@@ -161,7 +163,7 @@
                 </div>
 
                 <!-- Glassware Item -->
-                <div class="card pop-in" style="transition-delay: 0.1s;">
+                <div class="card pop-in shop-card" data-category="glassware" style="transition-delay: 0.1s;">
                     <img src="https://images.pexels.com/photos/29290422/pexels-photo-29290422.jpeg" alt="Glass"
                         style="width:100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
                     <h3>Copper Creek Pint</h3>
@@ -174,7 +176,7 @@
                 </div>
 
                 <!-- Accessories Item -->
-                <div class="card pop-in" style="transition-delay: 0.2s;">
+                <div class="card pop-in shop-card" data-category="accessories" style="transition-delay: 0.2s;">
                     <img src="https://images.pexels.com/photos/21820212/pexels-photo-21820212.jpeg" alt="Hat"
                         style="width:100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
                     <h3>Logo Trucker Hat</h3>
@@ -187,7 +189,7 @@
                 </div>
 
                 <!-- More Items -->
-                <div class="card pop-in">
+                <div class="card pop-in shop-card" data-category="apparel">
                     <img src="https://images.pexels.com/photos/12555806/pexels-photo-12555806.png" alt="Hoodie"
                         style="width:100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
                     <h3>Premium Hoodie</h3>
@@ -199,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="card pop-in" style="transition-delay: 0.1s;">
+                <div class="card pop-in shop-card" data-category="accessories" style="transition-delay: 0.1s;">
                     <img src="https://images.pexels.com/photos/4850282/pexels-photo-4850282.jpeg" alt="Growler"
                         style="width:100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
                     <h3>64oz Steel Growler</h3>
@@ -211,7 +213,7 @@
                     </div>
                 </div>
 
-                <div class="card pop-in" style="transition-delay: 0.2s;">
+                <div class="card pop-in shop-card" data-category="accessories" style="transition-delay: 0.2s;">
                     <img src="https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg"
                         alt="Bottle Opener"
                         style="width:100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">

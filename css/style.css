@@ -131,6 +131,9 @@ iframe {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.container.flex-column {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,6 +201,13 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .logo {
@@ -212,6 +222,8 @@ header {
     align-items: center;
     gap: 10px;
     white-space: nowrap;
+    margin-right: auto;
+    /* Push everything else to the right */
 }
 
 .logo i {
@@ -623,6 +635,11 @@ footer {
 
     .navbar {
         padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-right: 0;
     }
 
     .auth-buttons .btn,
