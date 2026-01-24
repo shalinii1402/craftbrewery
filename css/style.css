@@ -753,36 +753,75 @@ footer {
         text-align: center;
     }
 
-    /* Redesigned Navbar for Tablet/Mobile */
+    /* Header Layout & Spacing */
     .navbar {
-        padding: 0 20px;
-        justify-content: space-between;
-        height: 70px;
-        /* More compact header */
+        height: 60px;
+        /* Even more compact */
+        padding: 0 15px;
+        justify-content: space-between !important;
     }
 
     .card.form-container {
         padding: 30px 20px;
-        /* Reduced padding on mobile */
     }
 
     .logo {
-        margin-right: 0;
-        font-size: 20px;
-        /* Slightly smaller logo */
+        font-size: 18px;
+        /* Safe size for small screens */
+        gap: 8px;
     }
 
-    .nav-container {
+    /* Hide original buttons in header on tablet/mobile */
+    .auth-buttons .btn,
+    .auth-buttons .btn-outline {
+        display: none !important;
+    }
+
+    .auth-buttons {
+        display: flex;
+        align-items: center;
         gap: 15px;
-        /* Tighter spacing */
+        /* Spacing between theme icon and hamburger */
+        flex-shrink: 0;
+    }
+
+    .theme-toggle {
+        font-size: 18px;
+        order: 1;
+        flex-shrink: 0;
+        margin-right: 5px;
+    }
+
+    .hamburger {
+        display: block !important;
+        cursor: pointer;
+        font-size: 22px;
+        order: 2;
+        flex-shrink: 0;
+    }
+
+    .theme-toggle {
+        order: 1;
+        flex-shrink: 0;
+    }
+
+    .hamburger {
+        display: block !important;
+        cursor: pointer;
+        font-size: 24px;
+        order: 2;
+        flex-shrink: 0;
     }
 
     /* Target auth buttons in mobile menu container */
     .mobile-auth-container .btn,
     .mobile-auth-container .btn-outline {
+        display: flex !important;
+        /* Ensure visible in menu */
         padding: 8px 15px !important;
         font-size: 12px !important;
-        max-width: 200px !important;
+        max-width: 180px !important;
+        margin: 0 auto;
     }
 
     /* Center Home Page 1 Highlight points */
@@ -877,15 +916,23 @@ footer {
 
     /* Ensure the auth-buttons container stays visible and spaced for the hamburger */
     .auth-buttons {
-        display: flex;
+        display: flex !important;
         align-items: center;
-        gap: 20px;
-        /* Increased spacing between theme icon and hamburger */
+        gap: 15px;
+        /* Consistent spacing */
     }
 
     .navbar {
-        gap: 20px;
+        gap: 15px;
         /* Spacing between logo and auth-buttons */
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    /* Double-check button concealment in phone view */
+    .auth-buttons .btn,
+    .auth-buttons .btn-outline {
+        display: none !important;
     }
 
     /* Show the mobile auth container in the nav menu */
