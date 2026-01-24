@@ -14,6 +14,7 @@
         content="Experience the finest craft beers at Copper Creek Brewery. Book tours, shop merchandise, and locate our taprooms.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
@@ -21,8 +22,8 @@
     <!-- Header -->
     <header>
         <div class="container navbar">
-            <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
-                    class="logo-accent">CREEK</span></div>
+            <a href="index.html" class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                    class="logo-accent">CREEK</span></a>
 
             <nav>
                 <ul class="nav-links">
@@ -118,7 +119,8 @@
                         alt="Golden Lager"
                         style="width:100%; height: 250px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
                     <h3>Golden Lager</h3>
-                    <p style="color: #888; margin-bottom: 15px;">Crisp, refreshing, and perfectly balanced.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Crisp, refreshing, and perfectly balanced.
+                    </p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span style="font-weight: 700; color: var(--primary-color);">5.0% ABV</span>
                         <a href="product-details.html?id=golden-lager" class="btn btn-outline"
@@ -130,7 +132,8 @@
                     <img src="https://images.pexels.com/photos/31587995/pexels-photo-31587995.jpeg" alt="Amber Ale"
                         style="width:100%; height: 250px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
                     <h3>Copper Ale</h3>
-                    <p style="color: #888; margin-bottom: 15px;">Rich caramel notes with a smooth finish.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Rich caramel notes with a smooth finish.
+                    </p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span style="font-weight: 700; color: var(--primary-color);">6.2% ABV</span>
                         <a href="product-details.html?id=copper-ale" class="btn btn-outline"
@@ -142,7 +145,7 @@
                     <img src="https://images.pexels.com/photos/7220280/pexels-photo-7220280.jpeg" alt="Imperial Stout"
                         style="width:100%; height: 250px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
                     <h3>Midnight Stout</h3>
-                    <p style="color: #888; margin-bottom: 15px;">Bold, dark, and mysteriously complex.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Bold, dark, and mysteriously complex.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span style="font-weight: 700; color: var(--primary-color);">8.5% ABV</span>
                         <a href="product-details.html?id=midnight-stout" class="btn btn-outline"
@@ -174,7 +177,7 @@
                             alt="Customer" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h5 style="margin-bottom: 0;">David M.</h5>
-                            <span style="font-size: 12px; color: #888;">Craft Enthusiast</span>
+                            <span style="font-size: 12px; color: var(--text-muted);">Craft Enthusiast</span>
                         </div>
                     </div>
                 </div>
@@ -190,7 +193,7 @@
                             alt="Customer" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h5 style="margin-bottom: 0;">Sarah L.</h5>
-                            <span style="font-size: 12px; color: #888;">Food Blogger</span>
+                            <span style="font-size: 12px; color: var(--text-muted);">Food Blogger</span>
                         </div>
                     </div>
                 </div>
@@ -206,7 +209,7 @@
                             alt="Customer" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h5 style="margin-bottom: 0;">Michael R.</h5>
-                            <span style="font-size: 12px; color: #888;">Local Resident</span>
+                            <span style="font-size: 12px; color: var(--text-muted);">Local Resident</span>
                         </div>
                     </div>
                 </div>
@@ -269,9 +272,15 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
-                            class="logo-accent">CREEK</span></div>
+                    <a href="index.html" class="logo"><i class="fas fa-beer" style="margin-right: 10px;"></i>COPPER<span
+                            class="logo-accent">CREEK</span></a>
                     <p>Crafting memories, one pint at a time. Join our community of beer enthusiasts.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -301,7 +310,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Copper Creek Brewery. All rights reserved.</p>
+                <p>&copy; 2026 Copper Creek Brewery. All rights reserved.</p>
                 <div class="back-to-top" onclick="window.scrollTo(0,0)">
                     <i class="fas fa-arrow-up"></i>
                 </div>

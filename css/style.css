@@ -18,6 +18,8 @@
     --border-dark: #4a342a;
     /* Brown Border */
     --nav-bg-dark: rgba(26, 18, 11, 0.95);
+    --text-muted-dark: #b8a898;
+    /* Lighter muted text for dark theme */
 
     /* Light Mode (Soft Cream Theme) */
     --background-light: #fdfbf7;
@@ -29,6 +31,8 @@
     --border-light: #dccdb8;
     /* Tan Border */
     --nav-bg-light: rgba(253, 251, 247, 0.95);
+    --text-muted-light: #5d4d42;
+    /* Darker muted text for light theme */
 
     /* Accents */
     --accent: #bf6a30;
@@ -49,6 +53,7 @@
     --text: var(--text-light);
     --border: var(--border-light);
     --nav-bg: var(--nav-bg-light);
+    --text-muted: var(--text-muted-light);
 }
 
 /* Dark Mode Variables (Default) */
@@ -58,6 +63,7 @@
     --text: var(--text-dark);
     --border: var(--border-dark);
     --nav-bg: var(--nav-bg-dark);
+    --text-muted: var(--text-muted-dark);
 }
 
 /* Global Reset */
@@ -291,6 +297,7 @@ header {
     font-size: 24px;
     width: 24px;
     text-align: center;
+    color: var(--text);
 }
 
 
@@ -442,8 +449,37 @@ footer {
 }
 
 .footer-brand p {
-    color: #888;
+    color: #bbb;
+    margin: 20px 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
     margin-top: 20px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+    border: 1px solid #333;
+}
+
+.footer-social a:hover {
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    transform: translateY(-3px);
+}
+
+.footer-brand .logo-accent {
+    color: #fff !important;
 }
 
 .footer-col h4 {
@@ -456,7 +492,7 @@ footer {
 }
 
 .footer-links a {
-    color: #888;
+    color: var(--text-muted);
     transition: var(--transition);
 }
 
@@ -524,11 +560,13 @@ footer {
         width: 100%;
         height: calc(100vh - 80px);
         background-color: var(--background);
+        border-right: 1px solid var(--border);
         flex-direction: column;
         justify-content: flex-start;
         padding: 40px;
         transition: var(--transition);
         overflow-y: auto;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
