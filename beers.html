@@ -63,10 +63,13 @@
     <!-- 1. Hero -->
     <section class="hero"
         style="height: 60vh; min-height: 500px; padding-top: 120px; padding-bottom: 40px; display: flex; align-items: center; justify-content: center; background-image: url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
-        <div class="hero-content">
-            <h1 class="hero-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6); opacity: 1; transform: none;">
+        <div class="hero-content" style="padding: 0 20px;">
+            <h1 class="hero-title"
+                style="text-shadow: 2px 2px 10px rgba(0,0,0,0.8); opacity: 1; transform: none; font-size: clamp(32px, 8vw, 64px); line-height: 1.1;">
                 Explore Our Craft Beers</h1>
-            <p class="hero-subtitle">Explore our diverse rotation of small-batch brews, where tradition meets
+            <p class="hero-subtitle"
+                style="max-width: 800px; margin: 0 auto; font-weight: 400; text-shadow: 1px 1px 5px rgba(0,0,0,0.5);">
+                Explore our diverse rotation of small-batch brews, where tradition meets
                 innovation. From crisp lagers to complex stouts, every pint is brewed with passion and the finest
                 locally sourced ingredients for an unforgettable taste experience.</p>
         </div>
@@ -74,19 +77,22 @@
 
     <!-- 2. The Brewing Standard (New Section) -->
     <section class="section">
-        <div class="container grid-2">
-            <div class="reveal-left">
-                <h2>The Brewing Standard</h2>
-                <p>We don't chase trends; we perfect styles. Our beers are the result of rigorous experimentation and
-                    respect for historical brewing methods.</p>
-                <p style="margin-top: 20px;">Whether it's the specific mineral content of our water or the temperature
-                    of our fermentation, every variable is controlled to ensure the highest quality pint.</p>
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">The Brewing Standard</h2>
+            <div class="grid-2">
+                <div class="reveal-left">
+                    <p>We don't chase trends; we perfect styles. Our beers are the result of rigorous experimentation
+                        and
+                        respect for historical brewing methods.</p>
+                    <p style="margin-top: 20px;">Whether it's the specific mineral content of our water or the
+                        temperature
+                        of our fermentation, every variable is controlled to ensure the highest quality pint.</p>
+                </div>
+                <div class="pop-in">
+                    <img src="https://images.pexels.com/photos/12559380/pexels-photo-12559380.jpeg" alt="Brewing Tanks"
+                        style="border-radius: 8px;">
+                </div>
             </div>
-            <div class="pop-in">
-                <img src="https://images.pexels.com/photos/12559380/pexels-photo-12559380.jpeg" alt="Brewing Tanks"
-                    style="border-radius: 8px;">
-            </div>
-        </div>
     </section>
 
     <!-- 3. Beer List (Existing Grid) -->
@@ -131,11 +137,13 @@
                     <h3>Golden Lager</h3>
                     <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Lager • 5.0% ABV • 20
                         IBU</p>
-                    <p style="margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">A crisp, refreshing lager
-                        with subtle
-                        floral notes.</p>
-                    <a href="product-details.html?id=golden-lager" class="btn"
-                        style="width: 100%; text-align: center;">Details</a>
+                    <p style="margin-bottom: 25px; font-size: 14px; color: var(--text-muted); line-height: 1.6;">A
+                        crisp, refreshing lager brewed with noble hops, delivering subtle floral notes and a clean, dry
+                        finish. Perfect for any occasion.</p>
+                    <div style="text-align: center;">
+                        <a href="product-details.html?id=golden-lager" class="btn"
+                            style="width: 120px; padding: 10px 0; font-size: 13px;">Details</a>
+                    </div>
                 </div>
 
                 <!-- Beer 2 -->
@@ -147,11 +155,13 @@
                     <h3>Copper Ale</h3>
                     <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Amber Ale • 6.2% ABV
                         • 45 IBU</p>
-                    <p style="margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">Caramel malt backbone
-                        with a balanced
-                        hop bitterness.</p>
-                    <a href="product-details.html?id=copper-ale" class="btn"
-                        style="width: 100%; text-align: center;">Details</a>
+                    <p style="margin-bottom: 25px; font-size: 14px; color: var(--text-muted); line-height: 1.6;">Our
+                        signature amber ale boasts a rich caramel malt backbone balanced perfectly with NW hops. Smooth,
+                        medium-bodied, and deeply satisfying.</p>
+                    <div style="text-align: center;">
+                        <a href="product-details.html?id=copper-ale" class="btn"
+                            style="width: 120px; padding: 10px 0; font-size: 13px;">Details</a>
+                    </div>
                 </div>
 
                 <!-- Beer 3 -->
@@ -163,11 +173,13 @@
                     <h3>Midnight Stout</h3>
                     <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Stout • 8.5% ABV • 60
                         IBU</p>
-                    <p style="margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">Coffee and chocolate
-                        notes with a
-                        creamy mouthfeel.</p>
-                    <a href="product-details.html?id=midnight-stout" class="btn"
-                        style="width: 100%; text-align: center;">Details</a>
+                    <p style="margin-bottom: 25px; font-size: 14px; color: var(--text-muted); line-height: 1.6;">A
+                        velvety, pitch-black stout layered with intense notes of dark chocolate, roasted coffee beans,
+                        and a whisper of vanilla. Bold and complex.</p>
+                    <div style="text-align: center;">
+                        <a href="product-details.html?id=midnight-stout" class="btn"
+                            style="width: 120px; padding: 10px 0; font-size: 13px;">Details</a>
+                    </div>
                 </div>
 
                 <!-- Beer 4 -->
@@ -179,11 +191,13 @@
                     <h3>Hazy IPA</h3>
                     <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">IPA • 7.0% ABV • 55
                         IBU</p>
-                    <p style="margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">Juicy, tropical fruit
-                        flavors with low
-                        bitterness.</p>
-                    <a href="product-details.html?id=hazy-ipa" class="btn"
-                        style="width: 100%; text-align: center;">Details</a>
+                    <p style="margin-bottom: 25px; font-size: 14px; color: var(--text-muted); line-height: 1.6;">
+                        Exploding with tropical aromas of pineapple and passionfruit. This juicy IPA is naturally hazy
+                        with a soft, pillowy mouthfeel and low bitterness.</p>
+                    <div style="text-align: center;">
+                        <a href="product-details.html?id=hazy-ipa" class="btn"
+                            style="width: 120px; padding: 10px 0; font-size: 13px;">Details</a>
+                    </div>
                 </div>
 
                 <!-- Beer 5 -->
@@ -195,11 +209,13 @@
                     <h3>Berry Sour</h3>
                     <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Sour Ale • 4.5% ABV •
                         10 IBU</p>
-                    <p style="margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">Tart and refreshing with
-                        hints of
-                        raspberry and blackberry.</p>
-                    <a href="product-details.html?id=berry-sour" class="btn"
-                        style="width: 100%; text-align: center;">Details</a>
+                    <p style="margin-bottom: 25px; font-size: 14px; color: var(--text-muted); line-height: 1.6;">A
+                        vibrant kettle sour aged on locally sourced raspberries and blackberries. Refreshingly tart with
+                        a burst of summer fruit in every sip.</p>
+                    <div style="text-align: center;">
+                        <a href="product-details.html?id=berry-sour" class="btn"
+                            style="width: 120px; padding: 10px 0; font-size: 13px;">Details</a>
+                    </div>
                 </div>
 
                 <!-- Beer 6 -->
@@ -211,11 +227,13 @@
                     <h3>Pilsner</h3>
                     <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">Pilsner • 5.2% ABV •
                         30 IBU</p>
-                    <p style="margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">Traditional Czech-style
-                        pilsner, spicy
-                        and crisp.</p>
-                    <a href="product-details.html?id=pilsner" class="btn"
-                        style="width: 100%; text-align: center;">Details</a>
+                    <p style="margin-bottom: 25px; font-size: 14px; color: var(--text-muted); line-height: 1.6;">A
+                        traditional Bohemian-style pilsner. Expect a spicy Saaz hop aroma, a bready malt character, and
+                        a sharp, crisp bitterness.</p>
+                    <div style="text-align: center;">
+                        <a href="product-details.html?id=pilsner" class="btn"
+                            style="width: 120px; padding: 10px 0; font-size: 13px;">Details</a>
+                    </div>
                 </div>
             </div>
         </div>
