@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
             style: "Porter",
             abv: "7.2%",
             ibu: "35",
-            image: "https://images.unsplash.com/photo-1558383331-f520f2888351?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+            image: "https://images.pexels.com/photos/35028726/pexels-photo-35028726.jpeg",
             description: "Deep, smoky porter aged with oak, delivering rich chocolate, caramel, and roasted malt notes. Perfect for sipping by the fire.",
             ingredients: "Smoked Malt, Chocolate Malt, Oak Chips",
             notes: "Smoke, Chocolate, Oak, Vanilla",
