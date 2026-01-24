@@ -712,11 +712,11 @@ footer {
 
     .nav-links {
         position: fixed;
-        top: 80px;
+        top: 70px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 80px);
-        height: calc(100dvh - 80px);
+        height: calc(100vh - 70px);
+        height: calc(100dvh - 70px);
         background-color: var(--background);
         border-top: 1px solid var(--border);
         flex-direction: column;
@@ -743,18 +743,43 @@ footer {
         text-align: center;
     }
 
+    /* Redesigned Navbar for Tablet/Mobile */
     .navbar {
         padding: 0 20px;
         justify-content: space-between;
+        height: 70px;
+        /* More compact header */
     }
 
     .logo {
         margin-right: 0;
+        font-size: 20px;
+        /* Slightly smaller logo */
     }
 
-    .auth-buttons .btn,
-    .auth-buttons .btn-outline {
-        display: none;
+    .nav-container {
+        gap: 15px;
+        /* Tighter spacing */
+    }
+
+    /* Target auth buttons in mobile menu container */
+    .mobile-auth-container .btn,
+    .mobile-auth-container .btn-outline {
+        padding: 8px 15px !important;
+        font-size: 12px !important;
+        max-width: 200px !important;
+    }
+
+    /* Center Home Page 1 Highlight points */
+    .highlight-list {
+        align-items: center !important;
+        text-align: center !important;
+        padding: 0;
+    }
+
+    .highlight-list li {
+        justify-content: center;
+        width: 100%;
     }
 }
 
