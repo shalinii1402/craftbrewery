@@ -62,54 +62,49 @@
 
     <!-- 2. Contact Info & Form -->
     <section class="section">
-        <div class="container grid-2">
-            <div class="reveal-left">
+        <div class="container">
+            <!-- Centered Contact Information -->
+            <div class="contact-section-wrapper reveal-left">
                 <h2>Contact Information</h2>
                 <p style="margin-bottom: 30px;">Have questions about our beers, events, or booking a private party?
-                    Reach out to us directly or fill out the form.</p>
+                    Reach out to us directly or fill out the form below.</p>
 
-                <ul style="margin-bottom: 40px;">
-                    <li style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
-                        <i class="fas fa-map-marker-alt"
-                            style="color: var(--primary-color); font-size: 24px; width: 30px; text-align: center;"></i>
+                <ul class="contact-items-list">
+                    <li class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <strong style="display: block;">Address</strong>
-                            123 Brewery Lane, Craft City, ST 12345
+                            <strong>Address</strong>
+                            <p>123 Brewery Lane, Craft City, ST 12345</p>
                         </div>
                     </li>
-                    <li style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
-                        <i class="fas fa-phone"
-                            style="color: var(--primary-color); font-size: 24px; width: 30px; text-align: center;"></i>
+                    <li class="contact-item">
+                        <i class="fas fa-phone"></i>
                         <div>
-                            <strong style="display: block;">Phone</strong>
-                            (555) 123-4567
+                            <strong>Phone</strong>
+                            <p>(555) 123-4567</p>
                         </div>
                     </li>
-                    <li style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
-                        <i class="fas fa-envelope"
-                            style="color: var(--primary-color); font-size: 24px; width: 30px; text-align: center;"></i>
+                    <li class="contact-item">
+                        <i class="fas fa-envelope"></i>
                         <div>
-                            <strong style="display: block;">Email</strong>
-                            hello@coppercreek.com
+                            <strong>Email</strong>
+                            <p>hello@coppercreek.com</p>
                         </div>
                     </li>
                 </ul>
 
-                <h3 style="margin-bottom: 20px;">Follow Us</h3>
-                <div style="display: flex; gap: 20px;">
-                    <a href="#" style="font-size: 24px; color: var(--text); transition: color 0.3s;"
-                        onmouseover="this.style.color='var(--primary-color)'"
-                        onmouseout="this.style.color='var(--text)'"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" style="font-size: 24px; color: var(--text); transition: color 0.3s;"
-                        onmouseover="this.style.color='var(--primary-color)'"
-                        onmouseout="this.style.color='var(--text)'"><i class="fab fa-instagram"></i></a>
-                    <a href="#" style="font-size: 24px; color: var(--text); transition: color 0.3s;"
-                        onmouseover="this.style.color='var(--primary-color)'"
-                        onmouseout="this.style.color='var(--text)'"><i class="fab fa-twitter"></i></a>
+                <div class="follow-us-container">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons-centered">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="card pop-in form-container">
+            <div class="card pop-in form-container" style="max-width: 700px; margin: 60px auto 0;">
+                <h3 style="margin-bottom: 30px; text-align: center;">Send Us a Message</h3>
                 <form>
                     <div class="form-group">
                         <label>Name</label>
