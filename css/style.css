@@ -795,6 +795,32 @@ footer {
     transform: translateY(-5px);
 }
 
+
+/* Contact Page Two-Column Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .form-column-order {
+        order: -1;
+        /* Form appears on top in mobile */
+    }
+
+    .info-column-order {
+        order: 1;
+    }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .hamburger {

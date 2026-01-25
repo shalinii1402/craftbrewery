@@ -62,29 +62,30 @@
 
     <!-- 2. Contact Info & Form -->
     <section class="section">
-        <div class="container">
-            <!-- Centered Contact Information -->
-            <div class="contact-section-wrapper reveal-left">
-                <h2>Contact Information</h2>
-                <p style="margin-bottom: 30px;">Have questions about our beers, events, or booking a private party?
-                    Reach out to us directly or fill out the form below.</p>
+        <div class="container contact-grid">
+            <!-- Left Column: Contact Information -->
+            <div class="contact-section-wrapper reveal-left info-column-order">
+                <h2 style="text-align: left; margin-bottom: 20px;">Contact Information</h2>
+                <p style="margin-bottom: 30px; text-align: left;">Have questions about our beers, events, or booking a
+                    private party?
+                    Reach out to us directly or fill out the form.</p>
 
-                <ul class="contact-items-list">
-                    <li class="contact-item">
+                <ul class="contact-items-list" style="align-items: flex-start; margin-left: 0;">
+                    <li class="contact-item" style="align-items: flex-start; text-align: left;">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <strong>Address</strong>
                             <p>123 Brewery Lane, Craft City, ST 12345</p>
                         </div>
                     </li>
-                    <li class="contact-item">
+                    <li class="contact-item" style="align-items: flex-start; text-align: left;">
                         <i class="fas fa-phone"></i>
                         <div>
                             <strong>Phone</strong>
                             <p>(555) 123-4567</p>
                         </div>
                     </li>
-                    <li class="contact-item">
+                    <li class="contact-item" style="align-items: flex-start; text-align: left;">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <strong>Email</strong>
@@ -93,9 +94,9 @@
                     </li>
                 </ul>
 
-                <div class="follow-us-container">
-                    <h3>Follow Us</h3>
-                    <div class="social-icons-centered">
+                <div class="follow-us-container" style="align-items: flex-start;">
+                    <h3 style="margin-bottom: 15px;">Follow Us</h3>
+                    <div class="social-icons-centered" style="justify-content: flex-start;">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -103,7 +104,8 @@
                 </div>
             </div>
 
-            <div class="card pop-in form-container" style="max-width: 700px; margin: 60px auto 0;">
+            <!-- Right Column: Form -->
+            <div class="card pop-in form-container form-column-order" style="width: 100%; margin: 0;">
                 <h3 style="margin-bottom: 30px; text-align: center;">Send Us a Message</h3>
                 <form>
                     <div class="form-group">
