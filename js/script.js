@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img src="${relProduct.image}" alt="${relProduct.name}" style="width:100%; height: 250px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
                         <h3>${relProduct.name}</h3>
                         <p style="color: #888; margin-bottom: 15px; font-size: 14px;">${relProduct.style}</p>
-                         <div style="display: flex; justify-content: space-between; align-items: center;">
+                         <div class="card-stats">
                             <span style="font-weight: 700; color: var(--primary-color);">${relProduct.abv}</span>
                             <a href="product-details.html?id=${id}" class="btn btn-outline" style="padding: 8px 20px; font-size: 12px;">Details</a>
                         </div>
