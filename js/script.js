@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (menu && link) {
                 link.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 768) {
+                    if (window.innerWidth <= 1024) {
                         e.preventDefault();
                         const isCurrentlyShow = menu.classList.contains('show');
 
