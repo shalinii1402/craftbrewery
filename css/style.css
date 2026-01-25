@@ -829,11 +829,11 @@ footer {
 
     .nav-links {
         position: fixed;
-        top: 70px;
+        top: 75px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 70px);
-        height: calc(100dvh - 70px);
+        height: calc(100vh - 75px);
+        height: calc(100dvh - 75px);
         background-color: var(--background);
         border-top: 1px solid var(--border);
         flex-direction: column;
@@ -941,62 +941,58 @@ footer {
 
     /* Header Layout & Spacing */
     .navbar {
-        height: 60px;
-        /* Even more compact */
-        padding: 0 15px;
-        justify-content: space-between !important;
-    }
-
-    .card.form-container {
-        padding: 30px 20px;
+        height: 75px;
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
     }
 
     .logo {
-        font-size: 18px;
-        /* Safe size for small screens */
-        gap: 8px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 !important;
+        font-size: 20px;
+        z-index: 10;
     }
 
-    /* Hide original buttons in header on tablet/mobile */
+    .auth-buttons {
+        width: 100%;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center;
+        pointer-events: none;
+        /* Allow clicks through to absolute items if needed, but buttons inside should be auto */
+    }
+
+    .auth-buttons>* {
+        pointer-events: auto;
+    }
+
+    .theme-toggle {
+        order: 2;
+        /* Right side */
+        font-size: 20px;
+        margin-right: 0;
+    }
+
+    .hamburger {
+        order: 1;
+        /* Left side */
+        font-size: 24px;
+        display: block !important;
+    }
+
+    /* Hide login/signup buttons in the top bar on tablet/mobile */
     .auth-buttons .btn,
     .auth-buttons .btn-outline {
         display: none !important;
     }
 
-    .auth-buttons {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        /* Spacing between theme icon and hamburger */
-        flex-shrink: 0;
-    }
-
-    .theme-toggle {
-        font-size: 18px;
-        order: 1;
-        flex-shrink: 0;
-        margin-right: 5px;
-    }
-
-    .hamburger {
-        display: block !important;
-        cursor: pointer;
-        font-size: 22px;
-        order: 2;
-        flex-shrink: 0;
-    }
-
-    .theme-toggle {
-        order: 1;
-        flex-shrink: 0;
-    }
-
-    .hamburger {
-        display: block !important;
-        cursor: pointer;
-        font-size: 24px;
-        order: 2;
-        flex-shrink: 0;
+    .card.form-container {
+        padding: 30px 20px;
     }
 
     /* Target auth buttons in mobile menu container */
