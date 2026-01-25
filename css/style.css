@@ -935,6 +935,10 @@ footer {
         text-align: center;
     }
 
+    .footer-social {
+        justify-content: center;
+    }
+
     /* Header Layout & Spacing */
     .navbar {
         height: 60px;
