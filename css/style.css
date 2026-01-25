@@ -709,6 +709,11 @@ footer {
     /* Ensure it stays below mobile menu (z-1000) */
 }
 
+/* Hide back-to-top when mobile menu is active */
+body:has(.nav-links.active) .back-to-top {
+    display: none !important;
+}
+
 .back-to-top:hover {
     transform: translateY(-5px);
     background: var(--primary-hover);
@@ -829,20 +834,22 @@ footer {
 
     .nav-links {
         position: fixed;
-        top: 70px;
+        top: 60px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 70px);
-        height: calc(100dvh - 70px);
+        height: calc(100vh - 60px);
+        height: calc(100dvh - 60px);
         background-color: var(--background);
         border-top: 1px solid var(--border);
         flex-direction: column;
-        justify-content: flex-start;
-        padding: 40px 20px 80px;
-        overflow-y: auto;
-        overscroll-behavior: contain;
+        justify-content: center;
+        /* Center links for a clean, balanced look */
+        padding: 20px;
+        overflow: hidden;
+        /* No vertical scrollbar as requested */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        gap: 10px;
+        gap: 5px;
+        /* Tighter gap to fit within viewport */
         z-index: 1000;
         display: none;
         /* Hide by default on mobile */
@@ -870,12 +877,10 @@ footer {
         transform: none;
         box-shadow: none;
         background-color: var(--surface);
-        width: fit-content;
-        min-width: 180px;
-        margin: 0 auto;
-        padding: 0;
         border-radius: 8px;
-        border: 1px solid transparent;
+        border: 1px solid var(--border);
+        width: 100%;
+        max-width: 200px;
         transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;
         pointer-events: none;
         z-index: 10;
@@ -909,8 +914,9 @@ footer {
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 100%;
         white-space: nowrap;
+        width: 100%;
+        box-sizing: border-box;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -922,10 +928,12 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 12px 0;
+        padding: 10px 0;
+        /* Slightly reduced padding */
         width: 100%;
-        gap: 10px;
-        font-size: 18px;
+        gap: 8px;
+        font-size: 16px;
+        /* Optimized font size for mobile fit */
     }
 
     .grid-2,
@@ -1071,11 +1079,11 @@ footer {
     .mobile-auth-container .btn,
     .mobile-auth-container .btn-outline {
         width: 100%;
-        max-width: 180px;
-        /* Smaller buttons as requested */
+        max-width: 150px;
+        /* Even smaller as requested */
         margin: 0 auto;
-        padding: 8px 15px;
-        font-size: 12px;
+        padding: 8px 12px;
+        font-size: 11px;
         display: flex;
         justify-content: center;
     }
@@ -1142,6 +1150,21 @@ footer {
     }
 
     section {
-        overflow: visible;
+        overflow: hidden;
+        /* Fix overflow for Tours page and others on mobile */
+    }
+
+    /* Target specifically the calendar and forms on mobile */
+    input[type="date"],
+    input[type="number"],
+    select {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .card.form-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
