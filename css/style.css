@@ -632,6 +632,8 @@ footer {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .footer-social a {
@@ -665,6 +667,12 @@ footer {
 
 .footer-links li {
     margin-bottom: 12px;
+}
+
+.footer-col:last-child .footer-links li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-links a {
@@ -898,6 +906,7 @@ body:has(.nav-links.active) .back-to-top {
         /* Keep block but controlled by show class */
         opacity: 0;
         max-height: 0;
+        transform: none;
     }
 
     .nav-item:hover .dropdown-menu.show {
@@ -906,8 +915,8 @@ body:has(.nav-links.active) .back-to-top {
     }
 
     .dropdown-item {
-        padding: 8px 0;
-        font-size: 14px;
+        padding: 12px 0;
+        font-size: 16px;
         display: block;
         text-align: center;
         width: 100%;
