@@ -1,4 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-    <!-- Font Awesome - fa-beer-mug-empty -->
-    <path fill="#dfa04b" d="M368 96H288V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V320h48c53 0 96-43 96-96V192c0-53-43-96-96-96zM288 448H64V64H224v64c0 17.7 14.3 32 32 32h32V448zM352 160h16c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H352V160z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <!-- Rounded Background Square -->
+    <rect width="512" height="512" rx="140" fill="#dfa04b"/>
+    <!-- Mug Body -->
+    <path fill="#1a120b" d="M120 120 c 0 -22.1 17.9 -40 40 -40 h 140 c 22.1 0 40 17.9 40 40 v 272 c 0 22.1 -17.9 40 -40 40 h -140 c -22.1 0 -40 -17.9 -40 -40 z m 220 70 h 30 c 44.2 0 80 35.8 80 80 v 20 c 0 44.2 -35.8 80 -80 80 h -30 z m 30 140 c 22.1 0 40 -17.9 40 -40 v -20 c 0 -22.1 -17.9 -40 -40 -40 h -30 v 100 z" />
+    <!-- Vertical "Beer" Lines (cutouts) -->
+    <rect x="165" y="125" width="22" height="262" rx="6" fill="#dfa04b"/>
+    <rect x="219" y="125" width="22" height="262" rx="6" fill="#dfa04b"/>
+    <rect x="273" y="125" width="22" height="262" rx="6" fill="#dfa04b"/>
 </svg>
