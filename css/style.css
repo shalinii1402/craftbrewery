@@ -939,10 +939,14 @@ body:has(.nav-links.active) .back-to-top {
     }
 
     .grid-2,
-    .grid-3,
-    .footer-grid {
+    .grid-3 {
         grid-template-columns: 1fr !important;
         text-align: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 20px;
     }
 
     .footer-social {
@@ -1038,6 +1042,11 @@ body:has(.nav-links.active) .back-to-top {
     .footer-bottom {
         padding-bottom: 60px;
         /* Space for button on mobile to avoid overlap if text is long */
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px;
     }
 
     .back-to-top {
