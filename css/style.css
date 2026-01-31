@@ -164,7 +164,7 @@ iframe {
     cursor: pointer;
     font-size: 14px;
     transition: var(--transition);
-    margin: 0 auto;
+    margin: 0;
     /* Ensure buttons can be centered if they are block/inline-block */
 }
 
@@ -505,7 +505,7 @@ header {
 .hero-btns {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 8px;
     margin-top: 30px;
     animation: fadeInUp 1s ease 0.4s forwards;
     opacity: 0;
@@ -571,8 +571,6 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    align-items: start;
-    justify-items: center;
     width: 100%;
 }
 
@@ -605,6 +603,39 @@ header {
     gap: 15px;
     width: 100%;
     margin-top: auto;
+    padding-top: 20px;
+}
+
+/* Beer List Specific Improvements */
+.beer-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: var(--background);
+}
+
+.beer-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.beer-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.abv-text {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: block;
 }
 
 /* Footer */
@@ -941,7 +972,6 @@ body:has(.nav-links.active) .back-to-top {
     .grid-2,
     .grid-3 {
         grid-template-columns: 1fr !important;
-        text-align: center;
     }
 
     .footer-grid {
