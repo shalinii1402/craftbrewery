@@ -109,6 +109,13 @@ h6 {
     /* Default to center alignment per user request */
 }
 
+.large-title {
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    line-height: 1.2;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -872,33 +879,34 @@ body:has(.nav-links.active) .back-to-top {
     }
 
     .nav-links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        height: 100dvh;
-        background-color: var(--background);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 20px;
-        overflow: hidden;
-        z-index: 1050;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        background-color: var(--background) !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding: 100px 20px 40px !important;
+        overflow-y: auto !important;
+        z-index: 1050 !important;
         display: none;
-        gap: 0;
+        gap: 0 !important;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex !important;
         /* Instant open */
     }
 
     /* Mobile Dropdown Fix - Moved here to match hamburger appearance */
     .nav-item {
-        width: 100%;
-        text-align: center;
-        position: relative;
+        width: 100% !important;
+        text-align: center !important;
+        position: relative !important;
+        margin: 0 !important;
     }
 
     .dropdown-menu {
@@ -1177,6 +1185,11 @@ body:has(.nav-links.active) .back-to-top {
 
     .hero-title {
         font-size: 36px;
+    }
+
+    .large-title {
+        font-size: 26px;
+        letter-spacing: 2px;
     }
 
     .hero-btns {
