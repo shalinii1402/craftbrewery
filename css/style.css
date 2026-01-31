@@ -945,12 +945,26 @@ body:has(.nav-links.active) .back-to-top {
     }
 
     .footer-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
+        display: flex !important;
+        flex-direction: row;
         gap: 20px;
+        text-align: left;
+    }
+
+    .footer-grid>div {
+        flex: 1;
+    }
+
+    .footer-brand p {
+        text-align: left;
     }
 
     .footer-social {
-        justify-content: center;
+        justify-content: flex-start;
+    }
+
+    .footer-col:last-child .footer-links li {
+        justify-content: flex-start;
     }
 
     /* Header Layout & Spacing */
@@ -1037,7 +1051,7 @@ body:has(.nav-links.active) .back-to-top {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .footer-bottom {
         padding-bottom: 60px;
@@ -1045,8 +1059,22 @@ body:has(.nav-links.active) .back-to-top {
     }
 
     .footer-grid {
-        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column;
         gap: 40px;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-col:last-child .footer-links li {
+        justify-content: center;
     }
 
     .back-to-top {
